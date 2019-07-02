@@ -3,7 +3,14 @@ import './ClimbInputPage.css'
 
 
 export default function InputPage() {
+  const [location, setLocation] = useState()
+  const [routeName, setRouteName] = useState()
+  const [rating, setRating] = useState()
   const [height, setHeight] = useState(40)
+  const [directions, setDirections] = useState()
+  const [description, setDescription] = useState()
+  const [notes, setNotes] = useState()
+
   return (
     <div className="route-input-page">
       <h2>Route Entry Form</h2>
@@ -11,15 +18,15 @@ export default function InputPage() {
         <section className="route-form">
           <h6>
             Location
-            <input type="text" placeholder="Red Rocks..." />
+            <input type="text" placeholder="Red Rocks..." onChange={setLocation} />
           </h6>
           <h6>
             Route Name
-            <input type="text" placeholder="The Climb..." />
+            <input type="text" placeholder="The Climb..." onChange={setRouteName} />
           </h6>
           <h6>
             Rating
-            <input type="text" placeholder="5.10b..." />
+            <input type="text" placeholder="5.10b..." onChange={setRating} />
           </h6>
 
           <h6>
@@ -58,11 +65,11 @@ export default function InputPage() {
             </label>
           </ul>
           <h5>Directions</h5>
-          <textarea cols="40" rows="8" wrap="hard" />
+          <textarea cols="40" rows="8" wrap="hard" onChange={setDirections} />
           <h5>Description</h5>
-          <textarea cols="40" rows="8" wrap="hard" />
+          <textarea cols="40" rows="8" wrap="hard" onChange={setDescription} />
           <h5>Notes</h5>
-          <textarea cols="40" rows="8" wrap="hard" >Protection:</textarea>
+          <textarea cols="40" rows="8" wrap="hard" onChange={setNotes} >Protection:</textarea>
           <div>
             <button>Add Route</button>
           </div>
