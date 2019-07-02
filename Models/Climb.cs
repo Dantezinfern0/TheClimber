@@ -9,6 +9,8 @@ namespace theclimber.Models
     public string Location { get; set; }
     public string Rating { get; set; }
     public int Height { get; set; }
+    public string Directions { get; set; }
+    public string Description { get; set; }
     public string Notes { get; set; }
     public int Ticks { get; set; }
   }

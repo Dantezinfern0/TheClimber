@@ -57,6 +57,10 @@ export default function InputPage() {
               <input type="radio" id="grigri" value="grigri" name="equip" />
             </label>
           </ul>
+          <h5>Directions</h5>
+          <textarea cols="40" rows="8" wrap="hard" />
+          <h5>Description</h5>
+          <textarea cols="40" rows="8" wrap="hard" />
           <h5>Notes</h5>
           <textarea cols="40" rows="8" wrap="hard" >Protection:</textarea>
           <div>

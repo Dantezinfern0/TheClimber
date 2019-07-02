@@ -73,8 +73,8 @@ namespace sdg_react_template.Controllers
         }
 
         // POST: api/Climb
-        [HttpPost]
-        public async Task<ActionResult<Climb>> PostClimb(Climb climb)
+        [HttpPost("add")]
+        public async Task<ActionResult<Climb>> PostClimb([FromBody] Climb climb)
         {
             _context.Climbs.Add(climb);
             await _context.SaveChangesAsync();
