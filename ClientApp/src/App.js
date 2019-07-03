@@ -5,7 +5,8 @@ import { Home } from './components/Home';
 import { FetchData } from './components/FetchData';
 import { Counter } from './components/Counter';
 import ClimbInputPage from './Pages/ClimbInputPage.jsx'
-import BrowseClimbs from '.Pages/BrowseClimbs.jsx'
+import BrowseClimbs from './Pages/BrowseClimbs.jsx'
+import SingleClimb from './Pages/SingleClimb.jsx'
 
 export default class App extends Component {
   static displayName = App.name;
@@ -18,6 +19,7 @@ export default class App extends Component {
         <Route exact path='/browse' component={BrowseClimbs} />
         <Route exact path='/counter' component={Counter} />
         <Route exact path='/fetch-data' component={FetchData} />
+        <Route exact path='/:routeName' component={SingleClimb} />
       </Layout>
     );
   }

@@ -4,6 +4,7 @@ h6 {
   margin-top: 0;
   margin-bottom: 0;
   padding: 0.25rem;
+  min-width: 20%;
 }
 h5 {
   background-color: blue;  
@@ -11,6 +12,7 @@ h5 {
   margin-top: 0;
   margin-bottom: 0;
   padding: 0.25rem;
+  min-width: 20%;
 }
 .route-input-page {
   background-image: url(../Pics/TheClimberBG.jpg);
@@ -23,5 +25,6 @@ h5 {
   flex-direction: column;
   background-color: blue;
   margin-right: 80%;
+  min-width: 20%;
   margin-bottom: 0;
 }

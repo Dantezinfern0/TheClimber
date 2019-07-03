@@ -3,15 +3,16 @@ import './ClimbInputPage.css'
 import axios from 'axios'
 
 export default function InputPage() {
-  const [location, setLocation] = useState()
-  const [routeName, setRouteName] = useState()
-  const [rating, setRating] = useState()
+  const [location, setLocation] = useState('')
+  const [routeName, setRouteName] = useState('')
+  const [rating, setRating] = useState('')
   const [height, setHeight] = useState(40)
-  const [directions, setDirections] = useState()
-  const [description, setDescription] = useState()
-  const [notes, setNotes] = useState()
-  const [sport, setSport] = useState()
-  const [trad, setTrad] = useState()
+  const [directions, setDirections] = useState('')
+  const [description, setDescription] = useState('')
+  const [notes, setNotes] = useState('')
+  const [sport, setSport] = useState(Boolean)
+  const [trad, setTrad] = useState(Boolean)
+
   function sendData(e) {
     e.preventDefault()
     axios
@@ -28,17 +29,7 @@ export default function InputPage() {
       })
       .then(resp => console.log(resp.data))
   }
-  // console.log({
-  //   sport,
-  //   trad,
-  //   location,
-  //   routeName,
-  //   rating,
-  //   height,
-  //   directions,
-  //   description,
-  //   notes
-  // })
+  
 
   return (
     <div className="route-input-page">
@@ -85,28 +76,28 @@ export default function InputPage() {
             />
           </h6>
           <h5>Equipment</h5>
-          <ul className="equipment-list">
+          <div className="equipment-list">
             <label for="Sport">
-              Sport Setup
               <input
                 type="checkbox"
                 id="sport"
                 name="sportRack"
                 onChange={e => setSport(e.target.checked)}
                 value={sport}
-              />
+                />
+                Sport Setup
             </label>
             <label for="trad-rack">
-              Trad Gear
               <input
                 type="checkbox"
                 id="trad-rack"
                 name="tradRack"
                 onChange={e => setTrad(e.target.checked)}
                 value={trad}
-              />
+                />
+                Trad Gear
             </label>
-          </ul>
+          </div>
           <h5>Directions</h5>
           <textarea
             cols="40"
