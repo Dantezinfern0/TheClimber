@@ -53,13 +53,18 @@ export class NavMenu extends Component {
                   </NavLink>
                 </NavItem>
                 <NavItem>
+                  <NavLink tag={Link} className="text-dark" to="/browse">
+                    Browse Climbs
+                  </NavLink>
+                </NavItem>
+                <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/counter">
                     Counter
                   </NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/climb">
-                    Route
+                    Input Climb
                   </NavLink>
                 </NavItem>
                 <NavItem>

@@ -22,8 +22,8 @@ namespace sdg_react_template.Controllers
         }
 
         // GET: api/Climb
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Climb>>> GetClimbs()
+        [HttpGet("getall")]
+        public async Task<ActionResult<List<Climb>>> GetAllClimbs()
         {
             return await _context.Climbs.ToListAsync();
         }

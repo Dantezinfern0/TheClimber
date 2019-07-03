@@ -10,9 +10,10 @@ export default function InputPage() {
   const [directions, setDirections] = useState()
   const [description, setDescription] = useState()
   const [notes, setNotes] = useState()
-  const [sport, setSport] = useState(false)
-  const [trad, setTrad] = useState(false)
-  const sendData = () => {
+  const [sport, setSport] = useState()
+  const [trad, setTrad] = useState()
+  function sendData(e) {
+    e.preventDefault()
     axios
       .post('api/climb/add', {
         sport: sport,
@@ -42,7 +43,7 @@ export default function InputPage() {
   return (
     <div className="route-input-page">
       <h2>Route Entry Form</h2>
-      <form>
+      <form onSubmit={sendData}>
         <section className="route-form">
           <h6>
             Location
@@ -78,7 +79,7 @@ export default function InputPage() {
               type="range"
               max="200"
               min="20"
-              step="10"
+              step="1"
               onChange={e => setHeight(e.target.value)}
               value={height}
             />
