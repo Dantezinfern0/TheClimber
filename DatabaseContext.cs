@@ -47,7 +47,6 @@ namespace theclimber
     }
 
     public DbSet<Climb> Climbs { get; set; }
-    public DbSet<Equipment> EquipList { get; set; }
-    public DbSet<RouteEquip> Relations { get; set; }
+    
   }
 }

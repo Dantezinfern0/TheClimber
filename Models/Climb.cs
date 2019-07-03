@@ -12,6 +12,8 @@ namespace theclimber.Models
     public string Directions { get; set; }
     public string Description { get; set; }
     public string Notes { get; set; }
+    public bool SportGear { get; set; }
+    public bool TradGear { get; set; }
     public int Ticks { get; set; }
   }
 }

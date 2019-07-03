@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './ClimbInputPage.css'
-
+import axios from 'axios'
 
 export default function InputPage() {
   const [location, setLocation] = useState()
@@ -10,6 +10,34 @@ export default function InputPage() {
   const [directions, setDirections] = useState()
   const [description, setDescription] = useState()
   const [notes, setNotes] = useState()
+  const [sport, setSport] = useState(false)
+  const [trad, setTrad] = useState(false)
+  const sendData = () => {
+    axios
+      .post('api/climb/add', {
+        sport: sport,
+        trad: trad,
+        location: location,
+        routeName: routeName,
+        rating: rating,
+        height: height,
+        directions: directions,
+        description: description,
+        notes: notes
+      })
+      .then(resp => console.log(resp.data))
+  }
+  // console.log({
+  //   sport,
+  //   trad,
+  //   location,
+  //   routeName,
+  //   rating,
+  //   height,
+  //   directions,
+  //   description,
+  //   notes
+  // })
 
   return (
     <div className="route-input-page">
@@ -18,25 +46,40 @@ export default function InputPage() {
         <section className="route-form">
           <h6>
             Location
-            <input type="text" placeholder="Red Rocks..." onChange={setLocation} />
+            <input
+              type="text"
+              placeholder="Red Rocks..."
+              onChange={e => setLocation(e.target.value)}
+              value={location}
+            />
           </h6>
           <h6>
             Route Name
-            <input type="text" placeholder="The Climb..." onChange={setRouteName} />
+            <input
+              type="text"
+              placeholder="The Climb..."
+              onChange={e => setRouteName(e.target.value)}
+              value={routeName}
+            />
           </h6>
           <h6>
             Rating
-            <input type="text" placeholder="5.10b..." onChange={setRating} />
+            <input
+              type="text"
+              placeholder="5.10b..."
+              onChange={e => setRating(e.target.value)}
+              value={rating}
+            />
           </h6>
 
           <h6>
             Height {height}ft
             <input
-              onChange={e => setHeight(e.target.value)}
               type="range"
               max="200"
               min="20"
               step="10"
+              onChange={e => setHeight(e.target.value)}
               value={height}
             />
           </h6>
@@ -44,34 +87,53 @@ export default function InputPage() {
           <ul className="equipment-list">
             <label for="Sport">
               Sport Setup
-              <input type="radio" id="Sport" value="Sport" name="equipment" />
+              <input
+                type="checkbox"
+                id="sport"
+                name="sportRack"
+                onChange={e => setSport(e.target.checked)}
+                value={sport}
+              />
             </label>
             <label for="trad-rack">
               Trad Gear
               <input
-                type="radio"
+                type="checkbox"
                 id="trad-rack"
-                value="trad-rack"
-                name="equip"
+                name="tradRack"
+                onChange={e => setTrad(e.target.checked)}
+                value={trad}
               />
-            </label>
-            <label for="ATC">
-              ATC Belay Device
-              <input type="radio" id="ATC" value="ATC" name="equip" />
-            </label>
-            <label for="grigri">
-              GriGri
-              <input type="radio" id="grigri" value="grigri" name="equip" />
             </label>
           </ul>
           <h5>Directions</h5>
-          <textarea cols="40" rows="8" wrap="hard" onChange={setDirections} />
+          <textarea
+            cols="40"
+            rows="8"
+            wrap="hard"
+            onChange={e => setDirections(e.target.value)}
+            value={directions}
+          />
           <h5>Description</h5>
-          <textarea cols="40" rows="8" wrap="hard" onChange={setDescription} />
+          <textarea
+            cols="40"
+            rows="8"
+            wrap="hard"
+            onChange={e => setDescription(e.target.value)}
+            value={description}
+          />
           <h5>Notes</h5>
-          <textarea cols="40" rows="8" wrap="hard" onChange={setNotes} >Protection:</textarea>
+          <textarea
+            cols="40"
+            rows="8"
+            wrap="hard"
+            onChange={e => setNotes(e.target.value)}
+            value={notes}
+          >
+            Protection:
+          </textarea>
           <div>
-            <button>Add Route</button>
+            <button onClick={sendData}>Add Route</button>
           </div>
         </section>
       </form>
