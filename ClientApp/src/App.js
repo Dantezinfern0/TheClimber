@@ -5,7 +5,7 @@ import { Home } from './components/Home';
 import { FetchData } from './components/FetchData';
 import { Counter } from './components/Counter';
 import ClimbInputPage from './Pages/ClimbInputPage.jsx'
-import BrowseClimbs from '.Pages.BrowseClimbs.jsx'
+import BrowseClimbs from '.Pages/BrowseClimbs.jsx'
 
 export default class App extends Component {
   static displayName = App.name;
