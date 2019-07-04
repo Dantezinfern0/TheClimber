@@ -29,7 +29,6 @@ export default function InputPage() {
       })
       .then(resp => console.log(resp.data))
   }
-  
 
   return (
     <div className="route-input-page">
@@ -64,8 +63,8 @@ export default function InputPage() {
             />
           </h6>
 
-          <h6>
-            Height {height}ft
+          <h6>Height {height}ft</h6>
+          <div className="equipment-list">
             <input
               type="range"
               max="200"
@@ -74,7 +73,7 @@ export default function InputPage() {
               onChange={e => setHeight(e.target.value)}
               value={height}
             />
-          </h6>
+          </div>
           <h5>Equipment</h5>
           <div className="equipment-list">
             <label for="Sport">
@@ -84,8 +83,8 @@ export default function InputPage() {
                 name="sportRack"
                 onChange={e => setSport(e.target.checked)}
                 value={sport}
-                />
-                Sport Setup
+              />
+              Sport Setup
             </label>
             <label for="trad-rack">
               <input
@@ -94,8 +93,8 @@ export default function InputPage() {
                 name="tradRack"
                 onChange={e => setTrad(e.target.checked)}
                 value={trad}
-                />
-                Trad Gear
+              />
+              Trad Gear
             </label>
           </div>
           <h5>Directions</h5>
