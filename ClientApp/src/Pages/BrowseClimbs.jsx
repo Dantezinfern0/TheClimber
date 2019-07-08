@@ -18,7 +18,7 @@ export default function BrowseClimbs() {
       <ul>
         {theClimbs.map(m => {
           return (
-            <Link key={m.id} to={`/${m.routeName}`}>
+            <Link props={m.id} to={`/${m.routeName}`}>
               <li> {m.routeName} </li>
             </Link>
           )
