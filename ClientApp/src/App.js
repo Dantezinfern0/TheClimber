@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router';
 import { Layout } from './components/Layout';
 import { Home } from './components/Home';
-import { WeatherData } from './components/WeatherData.jsx';
+import  WeatherData  from './components/WeatherData.jsx';
 import { Counter } from './components/Counter';
 import ClimbInputPage from './Pages/ClimbInputPage.jsx'
 import BrowseClimbs from './Pages/BrowseClimbs.jsx'
