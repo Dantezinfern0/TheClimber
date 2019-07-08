@@ -33,7 +33,7 @@ export default function InputPage() {
   return (
     <div className="route-input-page">
       <h2>Route Entry Form</h2>
-      <form onSubmit={sendData}>
+      <form className="form-class" onSubmit={sendData}>
         <section className="route-form">
           <h6>
             Location

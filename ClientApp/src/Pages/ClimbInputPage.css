@@ -1,13 +1,13 @@
 h6 {
   background-color: blue;  
-  margin-right: 80%;
+  margin-right: 40%;
   margin-top: 0;
   margin-bottom: 0;
   padding: 0.25rem;
 }
 h5 {
   background-color: blue;  
-  margin-right: 80%;
+  margin-right: 40%;
   margin-top: 0;
   margin-bottom: 0;
   padding: 0.25rem;
@@ -22,6 +22,11 @@ h5 {
   display: flex;
   flex-direction: column;
   background-color: blue;
-  margin-right: 80%;
+  margin-right: 40%;
   margin-bottom: 0;
+}
+.form-class {
+  display: flex;
+  justify-content: center;
+
 }

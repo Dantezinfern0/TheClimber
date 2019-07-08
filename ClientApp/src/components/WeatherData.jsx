@@ -3,14 +3,16 @@ import axios from 'axios'
 const apiKey = '&appid=770d3167b3eba3b1c6578ba7c1153c3b'
 
 class WeatherData extends Component {
+  
   constructor(props) {
     super(props)
     this.state = {
+      userInput: '',
       weather: {},
-      temperature: Int32Array,
-      press: Int32Array,
-      min: Int32Array,
-      max: Int32Array,
+      temperature: 0,
+      press: 0,
+      min: 0,
+      max: 0,
       description: ''
     }
   }
@@ -26,7 +28,7 @@ class WeatherData extends Component {
           min: resp.data.main.temp_min,
           press: resp.data.main.pressure,
           temperature: resp.data.main.temp,
-          description: resp.data.weather.description
+          description: resp.data.weather[0].description
         })
       })
   }
@@ -41,11 +43,8 @@ class WeatherData extends Component {
             <form onSubmit={this.getWeather}>
               <button onClick={this.getWeather}>Search</button>
               <input type="text" placeholder="zip code..." />
-
               <p>City: {this.state.weather.name}</p>
-
-              <p>Pressure: {this.state.weather.press}</p>
-
+              {/* <p>Pressure: {this.state.weather.press}</p> */}
               <p>Current Temperature:{this.state.temperature}˚K</p>
             </form>
           </div>
