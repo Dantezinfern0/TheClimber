@@ -2,17 +2,17 @@ import React, { Component } from 'react'
 // import Axios from 'axios'
 
 class SingleClimb extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
-    this.state = ({
-      theClimb: {}
-    })
+    this.state = {
+      theClimb: []
+    }
   }
 
   // componentDidMount() {
-  //   Axios.get(`api/climb/${this.props.Id}`).then(resp => {
+  //   Axios.get(`api/climb/${this.props.match.params.routeId}`).then(resp => {
   //     console.log(resp.data)
-  //     this.setState =({
+  //     this.setState({
   //       theClimb: resp.data
   //     })
   //   })
@@ -25,7 +25,7 @@ class SingleClimb extends Component {
         <p>{theClimb.rating}</p>
         {theClimb.trad && <p>trad</p>}
         {theClimb.sport && <p>sport</p>}
-        <p>{theClimb.location}</p>
+        {theClimb && <p>{theClimb.location}</p>}
         <p>{theClimb.height} ft</p>
         <p>{theClimb.directions}</p>
         <p>{theClimb.description}</p>
@@ -36,4 +36,3 @@ class SingleClimb extends Component {
 }
 
 export default SingleClimb
-

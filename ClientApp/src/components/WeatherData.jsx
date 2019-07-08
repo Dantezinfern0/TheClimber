@@ -6,21 +6,31 @@ class WeatherData extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      weather: [],
-      temperature: {}
+      weather: {},
+      temperature: Int32Array,
+      press: Int32Array,
+      min: Int32Array,
+      max: Int32Array,
+      description: ''
     }
   }
-  getWeather(event) {
+  getWeather = event => {
     event.preventDefault()
     axios
       .get(`HTTPS://api.openweathermap.org/data/2.5/weather?zip=33704${apiKey}`)
       .then(resp => {
+        console.log(resp.data)
         this.setState({
-          weather: resp.data
-          // temperature: Math.ceil((resp.data.main.temp - 273.15) * 9) / 5 + 32
+          weather: resp.data,
+          max: resp.data.main.temp_max,
+          min: resp.data.main.temp_min,
+          press: resp.data.main.pressure,
+          temperature: resp.data.main.temp,
+          description: resp.data.weather.description
         })
       })
   }
+
   render() {
     return (
       <div>
@@ -31,9 +41,12 @@ class WeatherData extends Component {
             <form onSubmit={this.getWeather}>
               <button onClick={this.getWeather}>Search</button>
               <input type="text" placeholder="zip code..." />
-              {/* {weather.name && <p>{weather.name}</p>} */}
-              {/* {weather.weather[0].description && <p>{weather.weather[0].description}</p>} */}
-              {/* {temperature && <p>{temperature}˚F</p>} */}
+
+              <p>City: {this.state.weather.name}</p>
+
+              <p>Pressure: {this.state.weather.press}</p>
+
+              <p>Current Temperature:{this.state.temperature}˚K</p>
             </form>
           </div>
         </div>

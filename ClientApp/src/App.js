@@ -19,7 +19,7 @@ export default class App extends Component {
         <Route exact path="/browse" component={BrowseClimbs} />
         <Route exact path="/counter" component={Counter} />
         <Route exact path="/weather-data" component={WeatherData} />
-        <Route exact path="/:routeName" component={SingleClimb} />
+        <Route exact path="/:routeId" component={SingleClimb} />
       </Layout>
     )
   }
