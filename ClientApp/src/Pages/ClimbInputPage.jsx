@@ -10,8 +10,8 @@ export default function InputPage() {
   const [directions, setDirections] = useState('')
   const [description, setDescription] = useState('')
   const [notes, setNotes] = useState('')
-  const [sport, setSport] = useState(false)
-  const [trad, setTrad] = useState(false)
+  const [sport, setSport] = useState()
+  const [trad, setTrad] = useState()
 
   function sendData(e) {
     e.preventDefault()
