@@ -12,8 +12,8 @@ export default function WeatherForcast() {
       `HTTPS://api.openweathermap.org/data/2.5/weather?zip=33704${apiKey}`
     ).then(resp => {
       setWeather(resp.data)
-      let t = Math.ceil((weather.main.temp - 273.15) * 9) / 5 + 32
-      setTemp( t + '˚F')
+      // setTemp((Math.ceil((weather.main.temp - 273.15) * 9) / 5 + 32).toString())
+      
       console.log(weather)
     })
   }
@@ -31,7 +31,7 @@ export default function WeatherForcast() {
         />
         {weather.name && <p>{weather.name}</p>}
         {/* {weather.weather[0].description && <p>{weather.weather[0].description}</p>} */}
-        {temp && <p>temp</p>}
+        {temp && <p>{temp}˚F</p>}
       </div>
     </div>
   )
