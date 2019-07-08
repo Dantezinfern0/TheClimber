@@ -15,7 +15,7 @@ export default class App extends Component {
     return (
       <Layout>
         <Route exact path="/" component={Home} />
-        <Route exact path="/climb" component={ClimbInputPage} />
+        <Route exact path="/input" component={ClimbInputPage} />
         <Route exact path="/browse" component={BrowseClimbs} />
         <Route exact path="/counter" component={Counter} />
         <Route exact path="/weather-data" component={WeatherData} />

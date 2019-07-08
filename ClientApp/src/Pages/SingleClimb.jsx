@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import Axios from 'axios'
+import Axios from 'axios'
 
 class SingleClimb extends Component {
   constructor(props) {
@@ -9,19 +9,21 @@ class SingleClimb extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   Axios.get(`api/climb/${this.props.match.params.routeId}`).then(resp => {
-  //     console.log(resp.data)
-  //     this.setState({
-  //       theClimb: resp.data
-  //     })
-  //   })
-  // }
+  componentDidMount() {
+    Axios.get(`api/climb/${this.props.match.params.routeId}`).then(resp => {
+      console.log(resp.data)
+      this.setState({
+        theClimb: resp.data
+      })
+    })
+  }
 
   render() {
     return (
       <div>
-        {/* <h1>{theClimb.routeName}</h1>
+        <section>Single Climb Info</section>
+         {/* <h1>{this.state.theClimb.routeName}</h1> */}
+        {/*
         <p>{theClimb.rating}</p>
         {theClimb.trad && <p>trad</p>}
         {theClimb.sport && <p>sport</p>}
