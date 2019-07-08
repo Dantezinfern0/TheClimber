@@ -29,7 +29,7 @@ namespace sdg_react_template.Controllers
     }
 
     // GET: api/Climb/5
-    [HttpGet("getone/{route}")]
+    [HttpGet("{route}")]
     public async Task<ActionResult<Climb>> GetClimb(string route)
     {
       var climb = await _context.Climbs.FirstOrDefaultAsync(f => f.RouteName == route);
