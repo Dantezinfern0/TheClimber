@@ -3,6 +3,12 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 export default function BrowseClimbs() {
+  // constructor(props) {
+  //   super(props)
+  //   this.state = ({
+  //     Id : this.theClimbs.Id
+  //   })
+  // }
   const [theClimbs, setTheClimbs] = useState([])
 
   useEffect(() => {

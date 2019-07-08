@@ -1,19 +1,22 @@
 import React, { Component } from 'react'
-import Axios from 'axios'
+// import Axios from 'axios'
 
 class SingleClimb extends Component {
-  state = ({
-    theClimb: {}
-  })
-
-  componentDidMount() {
-    Axios.get(`api/climb/${this.props.match.params.Id}`).then(resp => {
-      
-      this.setState =({
-        theClimb: resp.data
-      })
+  constructor(props){
+    super(props)
+    this.state = ({
+      theClimb: {}
     })
   }
+
+  // componentDidMount() {
+  //   Axios.get(`api/climb/${this.props.Id}`).then(resp => {
+  //     console.log(resp.data)
+  //     this.setState =({
+  //       theClimb: resp.data
+  //     })
+  //   })
+  // }
 
   render() {
     return (
