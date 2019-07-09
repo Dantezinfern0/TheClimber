@@ -14,3 +14,11 @@ h2 {
 .weather-container {
   display: flex;
 }
+.route-list {
+  background-color: black;
+  color: skyblue;
+}
+li {
+  background-color: black;
+  list-style: none;
+}

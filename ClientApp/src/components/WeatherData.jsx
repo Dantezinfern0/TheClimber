@@ -56,7 +56,12 @@ class WeatherData extends Component {
         })
       })
   }
-
+autoUpdate = e => {
+  const state = this.state
+  state.userInput = e.target.value
+  this.setState(state)
+  this.getWeather(e)
+}
   updateValue = e => {
     const state = this.state
     state.userInput = e.target.value
@@ -70,6 +75,10 @@ class WeatherData extends Component {
           <section>
             <h1>Know Before You Go</h1>
             <h2>Weather Check</h2>
+            <h6>Favorite Spots</h6>
+            <button value="92252" onClick={this.autoUpdate}>Joshua Tree</button>
+            <button value="89506" onClick={this.autoUpdate}>Red Rocks</button>
+            <button value="93545" onClick={this.autoUpdate}>Lone Pine</button>
             <div>
               <form className="weather-form" onSubmit={this.getWeather}>
                 <input
@@ -88,7 +97,7 @@ class WeatherData extends Component {
             </div>
           </section>
           <section>
-            <h1>Route Info</h1>
+            <h1 className="route-list">Route Info</h1>
             <ul>
               {this.state.mountainProject.map(m => {
                 return (
