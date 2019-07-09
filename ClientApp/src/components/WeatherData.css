@@ -11,3 +11,6 @@ h2 {
 .weather-form {
   padding: 0.5rem;
 }
+.weather-container {
+  display: flex;
+}

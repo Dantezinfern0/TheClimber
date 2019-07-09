@@ -26,7 +26,7 @@ class BrowseClimbs extends Component {
       <ul>
         {this.state.info.map(m => {
           return (
-            <Link key={m.id} to={`/${m.id}`}>
+            <Link key={m.id} to={`/browse/${m.id}`}>
               <li> {m.routeName} </li>
             </Link>
           )

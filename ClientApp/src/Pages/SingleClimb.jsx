@@ -18,14 +18,7 @@ class SingleClimb extends Component {
       })
     })
   }
-  // componentDidMount() {
-  //   Axios.get(`api/climb/3`).then(resp => {
-  //     console.log(resp.data)
-  //     this.setState({
-  //       theClimb: resp.data
-  //     })
-  //   })
-  // }
+  
 
   render() {
     return (
