@@ -10,22 +10,22 @@ class SingleClimb extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   Axios.get(`api/climb/${this.props.match.params.routeId}`).then(resp => {
-  //     console.log(resp.data)
-  //     this.setState({
-  //       theClimb: resp.data
-  //     })
-  //   })
-  // }
   componentDidMount() {
-    Axios.get(`api/climb/3`).then(resp => {
+    Axios.get(`api/climb/${this.props.match.params.id}`).then(resp => {
       console.log(resp.data)
       this.setState({
         theClimb: resp.data
       })
     })
   }
+  // componentDidMount() {
+  //   Axios.get(`api/climb/3`).then(resp => {
+  //     console.log(resp.data)
+  //     this.setState({
+  //       theClimb: resp.data
+  //     })
+  //   })
+  // }
 
   render() {
     return (

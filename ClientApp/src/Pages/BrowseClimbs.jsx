@@ -8,7 +8,7 @@ class BrowseClimbs extends Component {
     super(props)
     this.state = ({
       info: []
-      
+
     })
   }
 
@@ -26,7 +26,7 @@ class BrowseClimbs extends Component {
       <ul>
         {this.state.info.map(m => {
           return (
-            <Link key={m.routeId} to={`/${m.routeName}`}>
+            <Link key={m.id} to={`/${m.id}`}>
               <li> {m.routeName} </li>
             </Link>
           )
