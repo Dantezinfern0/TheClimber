@@ -7,7 +7,7 @@ const weatherUrl = 'HTTPS://api.openweathermap.org/data/2.5/weather?zip='
 const mountainUrl =
   'https://www.mountainproject.com/data/get-routes-for-lat-lon?'
 const mountainUrlEnd =
-  '&maxDistance=10&minDiff=5.6&maxDiff=5.10&key=200507880-8cf9c49dbbe6841799698503aad73a96'
+  '&maxDistance=20&minDiff=5.6&maxDiff=5.10&key=200507880-8cf9c49dbbe6841799698503aad73a96'
 
 class WeatherData extends Component {
   constructor(props) {
