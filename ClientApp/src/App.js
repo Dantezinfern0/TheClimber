@@ -7,6 +7,7 @@ import ClimbInputPage from './Pages/ClimbInputPage.jsx'
 import BrowseClimbs from './Pages/BrowseClimbs.jsx'
 import SingleClimb from './Pages/SingleClimb.jsx'
 import SingleRoute from './Pages/SingleRoute.jsx'
+import ToDo from './Pages/ToDo.jsx'
 
 export default class App extends Component {
   static displayName = App.name
@@ -21,6 +22,7 @@ export default class App extends Component {
           <Route exact path="/weather-data" component={WeatherData} />
           <Route exact path="/browse/:id" component={SingleClimb} />
           <Route exact path="/route/:id" component={SingleRoute} />
+          <Route exact path="/todo" component={ToDo} />
         </Switch>
       </Layout>
     )
