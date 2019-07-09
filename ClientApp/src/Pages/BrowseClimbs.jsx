@@ -22,7 +22,7 @@ class BrowseClimbs extends Component {
   render() {
     return (
       <div>
-      <h2>List Of Climbs</h2>
+      <h2>Personal Record Climbs</h2>
       <ul>
         {this.state.info.map(m => {
           return (

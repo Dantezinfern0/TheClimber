@@ -94,8 +94,7 @@ class WeatherData extends Component {
                 return (
                   <Link key={m.id} to={`/route/${m.id}`}>
                     <li>
-                      {' '}
-                      {m.name}-{m.rating}-{m.type}{' '}
+                      {m.name}-{m.rating}-{m.type}
                     </li>
                   </Link>
                 )
