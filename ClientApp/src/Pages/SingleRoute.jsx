@@ -27,7 +27,7 @@ componentDidMount(){
         <h6>Pitches: {this.state.routeInfo.pitches}</h6>
         <h6>Rating: {this.state.routeInfo.rating}</h6>
         <h6>Type: {this.state.routeInfo.type}</h6>
-        {this.state.routeInfo.imgMedium && <img src={this.state.routeInfo.imgMedium} />}
+        {this.state.routeInfo.imgMedium && <img alt="climb reference" src={this.state.routeInfo.imgMedium} />}
       </div>
     );
   }

@@ -31,7 +31,7 @@ export default function InputPage() {
   }
 
   return (
-    <div className="route-input-page">
+    <body className="route-input-page">
       <h2 className="title-it">Route Entry Form</h2>
       <form className="form-class" onSubmit={sendData}>
         <section className="first-half">
@@ -74,7 +74,7 @@ export default function InputPage() {
               value={height}
             />
           </div>
-          <h5 className="the-h5">Equipment</h5>
+          <h5 className="the-h6">Equipment</h5>
           <div className="equipment-list">
             <label for="Sport">
               <input
@@ -99,7 +99,7 @@ export default function InputPage() {
           </div>
         </section>
         <section className="text-areas">
-          <h5 className="the-h5">Directions</h5>
+          <h5 className="the-h6">Directions</h5>
           <textarea
             cols="40"
             rows="8"
@@ -107,7 +107,7 @@ export default function InputPage() {
             onChange={e => setDirections(e.target.value)}
             value={directions}
           />
-          <h5 className="the-h5">Description</h5>
+          <h5 className="the-h6">Description</h5>
           <textarea
             cols="40"
             rows="8"
@@ -115,7 +115,7 @@ export default function InputPage() {
             onChange={e => setDescription(e.target.value)}
             value={description}
           />
-          <h5 className="the-h5">Notes</h5>
+          <h5 className="the-h6">Notes</h5>
           <textarea
             cols="40"
             rows="8"
@@ -130,6 +130,6 @@ export default function InputPage() {
           </div>
         </section>
       </form>
-    </div>
+    </body>
   )
 }

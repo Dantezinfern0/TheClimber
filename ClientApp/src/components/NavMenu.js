@@ -69,7 +69,7 @@ export class NavMenu extends Component {
                 </NavItem>
                 <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/todo">
-                    Weather data
+                    To Do
                   </NavLink>
                 </NavItem>
               </ul>

@@ -13,7 +13,7 @@ export class Home extends Component {
   render() {
     return (
       <div>
-        <img className="home-page-image" src={this.state.url} />
+        <img alt="Dante" className="home-page-image" src={this.state.url} />
       </div>
     )
   }
