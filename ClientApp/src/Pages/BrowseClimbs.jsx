@@ -24,7 +24,7 @@ class BrowseClimbs extends Component {
       <ul>
         {this.state.info.map(m => {
           return (
-            <Link props={m.Id} to={`/${m.routeName}`}>
+            <Link props={m.routeId} to={`/${m.routeName}`}>
               <li> {m.routeName} </li>
             </Link>
           )
@@ -38,32 +38,3 @@ class BrowseClimbs extends Component {
 export default BrowseClimbs;
 
 
-
-
-// import React, { useState, useEffect } from 'react'
-
-// export default function BrowseClimbs() {
-//   const [theClimbs, setTheClimbs] = useState([])
-
-//   useEffect(() => {
-//     axios.get('api/climb/getall').then(resp => {
-//       setTheClimbs(resp.data)
-//       console.log(resp.data)
-//     })
-//   }, [])
-
-//   return (
-//     <div>
-//       <h2>List Of Climbs</h2>
-//       <ul>
-//         {theClimbs.map(m => {
-//           return (
-//             <Link props={m.routeId} to={`/${m.routeName}`}>
-//               <li> {m.routeName} </li>
-//             </Link>
-//           )
-//         })}
-//       </ul>
-//     </div>
-//   )
-// }

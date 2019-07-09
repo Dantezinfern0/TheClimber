@@ -9,36 +9,38 @@ class SingleClimb extends Component {
     }
   }
 
-  
-  componentDidMount() {
-    Axios.get(`api/climb/${this.props.match.params.Id}`).then(resp => {
-      console.log(resp.data)
-      this.setState({
-        theClimb: resp.data
-      })
-    })
-  }
-  // componentDidMount(){
-  //   Axios.get(`api/climb/3`).then(resp => {
+  // componentDidMount() {
+  //   Axios.get(`api/climb/${this.props.match.params.routeId}`).then(resp => {
   //     console.log(resp.data)
   //     this.setState({
   //       theClimb: resp.data
   //     })
   //   })
   // }
+  componentDidMount() {
+    Axios.get(`api/climb/3`).then(resp => {
+      console.log(resp.data)
+      this.setState({
+        theClimb: resp.data
+      })
+    })
+  }
 
   render() {
     return (
       <div>
-        <section>Single Climb Info</section>
-         <h1>{this.state.theClimb.routeName}</h1>
-        
+        <h1>{this.state.theClimb.routeName}</h1>
+        <h6>Rating</h6>
         <p>{this.state.theClimb.rating}</p>
         {this.state.theClimb.trad && <p>trad</p>}
         {this.state.theClimb.sport && <p>sport</p>}
+        <h6>Climbing Area</h6>
         <p>{this.state.theClimb.location}</p>
+        <h6>Height</h6>
         <p>{this.state.theClimb.height} ft</p>
+        <h6>Directions</h6>
         <p>{this.state.theClimb.directions}</p>
+        <h6>Description</h6>
         <p>{this.state.theClimb.description}</p>
         <p>{this.state.theClimb.notes}</p>
       </div>

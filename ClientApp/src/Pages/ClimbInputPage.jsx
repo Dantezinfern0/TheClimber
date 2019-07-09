@@ -32,10 +32,10 @@ export default function InputPage() {
 
   return (
     <div className="route-input-page">
-      <h2>Route Entry Form</h2>
+      <h2 className="title-it">Route Entry Form</h2>
       <form className="form-class" onSubmit={sendData}>
-        <section className="route-form">
-          <h6>
+        <section className="first-half">
+          <h6 className="the-h6">
             Location
             <input
               type="text"
@@ -44,7 +44,7 @@ export default function InputPage() {
               value={location}
             />
           </h6>
-          <h6>
+          <h6 className="the-h6">
             Route Name
             <input
               type="text"
@@ -53,7 +53,7 @@ export default function InputPage() {
               value={routeName}
             />
           </h6>
-          <h6>
+          <h6 className="the-h6">
             Rating
             <input
               type="text"
@@ -63,7 +63,7 @@ export default function InputPage() {
             />
           </h6>
 
-          <h6>Height {height}ft</h6>
+          <h6 className="the-h6">Height {height}ft</h6>
           <div className="equipment-list">
             <input
               type="range"
@@ -74,7 +74,7 @@ export default function InputPage() {
               value={height}
             />
           </div>
-          <h5>Equipment</h5>
+          <h5 className="the-h5">Equipment</h5>
           <div className="equipment-list">
             <label for="Sport">
               <input
@@ -97,7 +97,9 @@ export default function InputPage() {
               Trad Gear
             </label>
           </div>
-          <h5>Directions</h5>
+        </section>
+        <section className="text-areas">
+          <h5 className="the-h5">Directions</h5>
           <textarea
             cols="40"
             rows="8"
@@ -105,7 +107,7 @@ export default function InputPage() {
             onChange={e => setDirections(e.target.value)}
             value={directions}
           />
-          <h5>Description</h5>
+          <h5 className="the-h5">Description</h5>
           <textarea
             cols="40"
             rows="8"
@@ -113,7 +115,7 @@ export default function InputPage() {
             onChange={e => setDescription(e.target.value)}
             value={description}
           />
-          <h5>Notes</h5>
+          <h5 className="the-h5">Notes</h5>
           <textarea
             cols="40"
             rows="8"
