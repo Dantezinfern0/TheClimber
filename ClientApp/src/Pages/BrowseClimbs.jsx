@@ -1,35 +1,69 @@
-import React, { useState, useEffect } from 'react'
+import React, { Component } from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-export default function BrowseClimbs() {
-  // constructor(props) {
-  //   super(props)
-  //   this.state = ({
-  //     Id : this.theClimbs.Id
-  //   })
-  // }
-  const [theClimbs, setTheClimbs] = useState([])
-
-  useEffect(() => {
-    axios.get('api/climb/getall').then(resp => {
-      setTheClimbs(resp.data)
-      console.log(resp.data)
+class BrowseClimbs extends Component {
+  constructor(props) {
+    super(props)
+    this.state = ({
+      info: []
     })
-  }, [])
+  }
 
-  return (
-    <div>
+  componentDidMount(){
+    axios.get('api/climb/getall').then(resp => {
+      this.setState({
+        info: resp.data
+      })
+    })
+  }
+  render() {
+    return (
+      <div>
       <h2>List Of Climbs</h2>
       <ul>
-        {theClimbs.map(m => {
+        {this.state.info.map(m => {
           return (
-            <Link props={m.routeId} to={`/${m.routeName}`}>
+            <Link props={m.Id} to={`/${m.routeName}`}>
               <li> {m.routeName} </li>
             </Link>
           )
         })}
       </ul>
-    </div>
-  )
+      </div>
+    );
+  }
 }
+
+export default BrowseClimbs;
+
+
+
+
+// import React, { useState, useEffect } from 'react'
+
+// export default function BrowseClimbs() {
+//   const [theClimbs, setTheClimbs] = useState([])
+
+//   useEffect(() => {
+//     axios.get('api/climb/getall').then(resp => {
+//       setTheClimbs(resp.data)
+//       console.log(resp.data)
+//     })
+//   }, [])
+
+//   return (
+//     <div>
+//       <h2>List Of Climbs</h2>
+//       <ul>
+//         {theClimbs.map(m => {
+//           return (
+//             <Link props={m.routeId} to={`/${m.routeName}`}>
+//               <li> {m.routeName} </li>
+//             </Link>
+//           )
+//         })}
+//       </ul>
+//     </div>
+//   )
+// }

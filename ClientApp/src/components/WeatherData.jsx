@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import './WeatherData.css'
 const apiKey = '&appid=770d3167b3eba3b1c6578ba7c1153c3b'
 
 class WeatherData extends Component {
-  
   constructor(props) {
     super(props)
     this.state = {
@@ -19,7 +19,7 @@ class WeatherData extends Component {
   getWeather = event => {
     event.preventDefault()
     axios
-      .get(`HTTPS://api.openweathermap.org/data/2.5/weather?zip=33704${apiKey}`)
+      .get(`HTTPS://api.openweathermap.org/data/2.5/weather?zip=${this.state.userInput}${apiKey}`)
       .then(resp => {
         console.log(resp.data)
         this.setState({
@@ -32,20 +32,28 @@ class WeatherData extends Component {
         })
       })
   }
+  updateValue = e => {
+    const state = this.state
+    state.userInput = e.target.value
+    this.setState(state)
+  }
 
   render() {
     return (
-      <div>
+      <div className="weather-background">
         <div>
           <h1>Know Before You Go</h1>
           <h2>Weather Check</h2>
           <div>
-            <form onSubmit={this.getWeather}>
+            <form className="weather-form" onSubmit={this.getWeather}>
+              <input type="text" placeholder="zip code..." onChange={this.updateValue} />
               <button onClick={this.getWeather}>Search</button>
-              <input type="text" placeholder="zip code..." />
               <p>City: {this.state.weather.name}</p>
-              {/* <p>Pressure: {this.state.weather.press}</p> */}
+              <p>Pressure: {this.state.press}</p>
               <p>Current Temperature:{this.state.temperature}˚K</p>
+              <p>{this.state.description}</p>
+              <p>High:{this.state.max}˚K</p>
+              <p>Low:{this.state.min}˚K</p>
             </form>
           </div>
         </div>

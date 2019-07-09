@@ -14,7 +14,7 @@ export class Home extends Component {
       <div>
         <p>Total vertical feet climbed: 23,403ft</p>
         <p>Routes Climbed: 1323</p>
-        <p>Statistics and Stuff</p>
+        <p>Statistics and Stuff {this.state.zero}</p>
       </div>
     )
   }
