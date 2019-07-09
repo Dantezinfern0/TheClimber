@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Home.css'
 
 export class Home extends Component {
   static displayName = Home.name
@@ -12,9 +13,7 @@ export class Home extends Component {
   render() {
     return (
       <div>
-        <p>Total vertical feet climbed: 23,403ft</p>
-        <p>Routes Climbed: 1323</p>
-        <p>Statistics and Stuff {this.state.zero}</p>
+        
       </div>
     )
   }
