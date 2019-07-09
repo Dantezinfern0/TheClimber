@@ -98,7 +98,7 @@ autoUpdate = e => {
           </section>
           <section>
             <h1 className="route-list">Route Info</h1>
-            <ul>
+            <ul className="list-of-routes">
               {this.state.mountainProject.map(m => {
                 return (
                   <Link key={m.id} to={`/route/${m.id}`}>
