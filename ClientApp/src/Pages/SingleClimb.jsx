@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Axios from 'axios'
+import './SingleClimb.css'
 
 class SingleClimb extends Component {
   constructor(props) {
@@ -32,8 +33,8 @@ class SingleClimb extends Component {
         <h1>{this.state.theClimb.routeName}</h1>
         <h6>Rating</h6>
         <p>{this.state.theClimb.rating}</p>
-        {this.state.theClimb.trad && <p>trad</p>}
-        {this.state.theClimb.sport && <p>sport</p>}
+        {/* {this.state.theClimb.trad && <p>trad</p>}
+        {this.state.theClimb.sport && <p>sport</p>} */}
         <h6>Climbing Area</h6>
         <p>{this.state.theClimb.location}</p>
         <h6>Height</h6>

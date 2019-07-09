@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import './BrowseClimbs.css'
 
 class BrowseClimbs extends Component {
   constructor(props) {
     super(props)
     this.state = ({
       info: []
+      
     })
   }
 
@@ -24,7 +26,7 @@ class BrowseClimbs extends Component {
       <ul>
         {this.state.info.map(m => {
           return (
-            <Link props={m.routeId} to={`/${m.routeName}`}>
+            <Link key={m.routeId} to={`/${m.routeName}`}>
               <li> {m.routeName} </li>
             </Link>
           )
