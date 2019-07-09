@@ -20,8 +20,6 @@ class WeatherData extends Component {
       min: 0,
       max: 0,
       description: '',
-      lat: 40.3,
-      lon: -105.25,
       mountainProject: []
     }
   }
@@ -38,30 +36,28 @@ class WeatherData extends Component {
           min: Math.ceil((resp.data.main.temp_min - 273.15) * 9) / 5 + 32,
           press: resp.data.main.pressure,
           temperature: Math.ceil((resp.data.main.temp - 273.15) * 9) / 5 + 32,
-          description: resp.data.weather[0].description,
-          lat: resp.data.coord.lat,
-          lon: resp.data.coord.lon
+          description: resp.data.weather[0].description
         })
-      })
-    axios
-      .get(
-        `${mountainUrl}lat=${this.state.lat}&lon=${
-          this.state.lon
-        }${mountainUrlEnd}`
-      )
-      .then(resp => {
-        console.log(resp.data)
-        this.setState({
-          mountainProject: resp.data.routes
-        })
+        axios
+          .get(
+            `${mountainUrl}lat=${resp.data.coord.lat}&lon=${
+              resp.data.coord.lon
+            }${mountainUrlEnd}`
+          )
+          .then(resp => {
+            console.log(resp.data)
+            this.setState({
+              mountainProject: resp.data.routes
+            })
+          })
       })
   }
-autoUpdate = e => {
-  const state = this.state
-  state.userInput = e.target.value
-  this.setState(state)
-  this.getWeather(e)
-}
+  autoUpdate = e => {
+    const state = this.state
+    state.userInput = e.target.value
+    this.setState(state)
+    this.getWeather(e)
+  }
   updateValue = e => {
     const state = this.state
     state.userInput = e.target.value
@@ -76,9 +72,15 @@ autoUpdate = e => {
             <h1>Know Before You Go</h1>
             <h2>Weather Check</h2>
             <h6>Favorite Spots</h6>
-            <button value="92252" onClick={this.autoUpdate}>Joshua Tree</button>
-            <button value="89506" onClick={this.autoUpdate}>Red Rocks</button>
-            <button value="93545" onClick={this.autoUpdate}>Lone Pine</button>
+            <button value="92252" onClick={this.autoUpdate}>
+              Joshua Tree
+            </button>
+            <button value="89506" onClick={this.autoUpdate}>
+              Red Rocks
+            </button>
+            <button value="93545" onClick={this.autoUpdate}>
+              Lone Pine
+            </button>
             <div>
               <form className="weather-form" onSubmit={this.getWeather}>
                 <input

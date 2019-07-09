@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 
 const toDoUrl =
   'https://www.mountainproject.com/data/get-to-dos?email=danteharasz@gmail.com&key=200507880-8cf9c49dbbe6841799698503aad73a96'
@@ -31,7 +32,9 @@ class ToDo extends Component {
       <div>
         <h1>To Do List</h1>
         {this.state.stuff.map(m => {
-          return <p>{m.name}</p>
+          return <Link key={m.id} to={`/route/${m.id}`}>
+            <p>{m.name}</p>
+            </Link>
         })}
       </div>
     )
