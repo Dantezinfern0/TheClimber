@@ -16,22 +16,24 @@ class WeatherData extends Component {
       description: ''
     }
   }
+
   getWeather = event => {
     event.preventDefault()
     axios
       .get(`HTTPS://api.openweathermap.org/data/2.5/weather?zip=${this.state.userInput}${apiKey}`)
       .then(resp => {
-        console.log(resp.data)
+        // console.log(resp.data)
         this.setState({
           weather: resp.data,
-          max: resp.data.main.temp_max,
-          min: resp.data.main.temp_min,
+          max: Math.ceil((resp.data.main.temp_max - 273.15) * 9) / 5 + 32,
+          min: Math.ceil((resp.data.main.temp_min - 273.15) * 9) / 5 + 32,
           press: resp.data.main.pressure,
-          temperature: resp.data.main.temp,
+          temperature: Math.ceil((resp.data.main.temp - 273.15) * 9) / 5 + 32,
           description: resp.data.weather[0].description
         })
       })
   }
+  
   updateValue = e => {
     const state = this.state
     state.userInput = e.target.value
@@ -50,10 +52,10 @@ class WeatherData extends Component {
               <button onClick={this.getWeather}>Search</button>
               <p>City: {this.state.weather.name}</p>
               <p>Pressure: {this.state.press}</p>
-              <p>Current Temperature:{this.state.temperature}˚K</p>
-              <p>{this.state.description}</p>
-              <p>High:{this.state.max}˚K</p>
-              <p>Low:{this.state.min}˚K</p>
+              <p>Current Temperature: {this.state.temperature}˚F</p>
+              <p>Conditions: {this.state.description}</p>
+              <p>High: {this.state.max}˚F</p>
+              <p>Low: {this.state.min}˚F</p>
             </form>
           </div>
         </div>
