@@ -31,11 +31,13 @@ class ToDo extends Component {
     return (
       <div>
         <h1>To Do List</h1>
+        <div className="thin-black-border">
         {this.state.stuff.map(m => {
           return <Link key={m.id} to={`/route/${m.id}`}>
             <p>{m.name}</p>
             </Link>
         })}
+        </div>
       </div>
     )
   }

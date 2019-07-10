@@ -1,0 +1,10 @@
+.thin-black-border {
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  max-width: 50%;
+  padding: 1rem;
+}
+html {
+  background-color: ivory;
+}

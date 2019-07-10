@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import './MountainProject.css'
 
 const URL1 =
   'https://www.mountainproject.com/data/get-ticks?email=danteharasz@gmail.com&key=200507880-8cf9c49dbbe6841799698503aad73a96'
@@ -38,8 +39,9 @@ class MountainProject extends Component {
     return (
       <div>
         <h1>Climbing Record</h1>
-        <h3>Hardest:{this.state.tickInfo.hardest}</h3>
-        <h3>Average:{this.state.tickInfo.average}</h3>
+        <h5>Hardest:{this.state.tickInfo.hardest}</h5>
+        <h5>Average:{this.state.tickInfo.average}</h5>
+        <div className="thin-black-border">
         <ul>
           {this.state.routes.map(m => {
             return (
@@ -49,6 +51,7 @@ class MountainProject extends Component {
             )
           })}
         </ul>
+        </div>
       </div>
     )
   }

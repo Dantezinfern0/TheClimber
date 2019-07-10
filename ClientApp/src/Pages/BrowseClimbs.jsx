@@ -11,11 +11,14 @@ class BrowseClimbs extends Component {
     }
   }
   deleteItem = e => {
-    window.confirm('Delete this Entry?')
-    axios.delete(`api/Climb/${e.target.value}`).then(resp => {
-      console.log(resp.data)
-    })
-    window.location.reload(true)
+    if (window.confirm('Delete this Entry?')) {
+      axios.delete(`api/Climb/${e.target.value}`).then(resp => {
+        console.log(resp.data)
+      })
+      window.location.reload(true)
+    } else {
+      window.confirm('Item Not Deleted')
+    }
   }
   componentDidMount() {
     axios.get('api/climb/getall').then(resp => {

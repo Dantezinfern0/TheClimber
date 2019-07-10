@@ -2,13 +2,13 @@ dotnet publish -c Release
 
 cp dockerfile ./bin/release/netcoreapp2.2/publish
 
-docker build -t sdg-template-image ./bin/release/netcoreapp2.2/publish
+docker build -t rock-climbing-log-and-planner ./bin/release/netcoreapp2.2/publish
 
-docker tag sdg-template-image registry.heroku.com/heroku-web-app/web
+docker tag rock-climbing-log-and-planner registry.heroku.com/rock-climbing-log-and-planner/web
 
-docker push registry.heroku.com/heroku-web-app/web
+docker push registry.heroku.com/rock-climbing-log-and-planner/web
 
-heroku container:release web -a heroku-web-app
+heroku container:release web -a rock-climbing-log-and-planner
 
 # sudo chmod 755 deploy.sh
 # ./deploy.sh

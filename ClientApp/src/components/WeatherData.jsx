@@ -8,6 +8,10 @@ const mountainUrl =
   'https://www.mountainproject.com/data/get-routes-for-lat-lon?'
 const mountainUrlEnd =
   '&maxDistance=20&minDiff=5.6&maxDiff=5.10&key=200507880-8cf9c49dbbe6841799698503aad73a96'
+// 34.112, -118.926 - echo cliffs
+// 	34.096, -118.731 - Malibu Creek State Park
+// 36.596, -118.109 - Alabama Hills
+//  36.155, -115.436 red Rocks, NV black corridor
 
 class WeatherData extends Component {
   constructor(props) {
