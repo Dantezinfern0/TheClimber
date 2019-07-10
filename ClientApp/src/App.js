@@ -8,6 +8,7 @@ import BrowseClimbs from './Pages/BrowseClimbs.jsx'
 import SingleClimb from './Pages/SingleClimb.jsx'
 import SingleRoute from './Pages/SingleRoute.jsx'
 import ToDo from './Pages/ToDo.jsx'
+import MountainProject from './Pages/MountainProject.jsx'
 
 export default class App extends Component {
   static displayName = App.name
@@ -23,6 +24,7 @@ export default class App extends Component {
           <Route exact path="/browse/:id" component={SingleClimb} />
           <Route exact path="/route/:id" component={SingleRoute} />
           <Route exact path="/todo" component={ToDo} />
+          <Route exact path="/record" component={MountainProject} />
         </Switch>
       </Layout>
     )
