@@ -36,6 +36,7 @@ class SingleClimb extends Component {
         <p>{this.state.theClimb.directions}</p>
         <h6>Description</h6>
         <p>{this.state.theClimb.description}</p>
+        <h6>Notes</h6>
         <p>{this.state.theClimb.notes}</p>
       </div>
     )
