@@ -28,6 +28,8 @@ export default function InputPage() {
         notes: notes
       })
       .then(resp => console.log(resp.data))
+      window.confirm('Log Entry Confirmed!')
+      window.location.reload(true)
   }
 
   return (
