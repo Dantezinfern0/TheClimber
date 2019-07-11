@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './ClimbInputPage.css'
 import axios from 'axios'
+// import auth from '../auth'
 
 export default function InputPage() {
   const [location, setLocation] = useState('')

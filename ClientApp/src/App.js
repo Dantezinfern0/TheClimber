@@ -19,6 +19,7 @@ export default class App extends Component {
     return (
       <Layout>
         <Switch>
+          <Route exact path="/login" render={() => auth.login()} />
           <Route exact path="/" component={Home} />
           <Route exact path="/input" component={ClimbInputPage} />
           <Route exact path="/browse" component={BrowseClimbs} />
@@ -27,7 +28,6 @@ export default class App extends Component {
           <Route exact path="/route/:id" component={SingleRoute} />
           <Route exact path="/todo" component={ToDo} />
           <Route exact path="/record" component={MountainProject} />
-          <Route path="/login" render={() => auth.login()} />
           <Route
             path="/logout"
             render={() => {

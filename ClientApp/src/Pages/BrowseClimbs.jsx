@@ -2,12 +2,23 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import './BrowseClimbs.css'
+import auth from '../auth'
 
 class BrowseClimbs extends Component {
   constructor(props) {
     super(props)
     this.state = {
       info: []
+    }
+  }
+  componentWillMount() {
+    if (!localStorage.getItem("access_token")) {
+      window.location.href = "/login"
+    }
+    if (auth.isAuthenticated()) {
+      axios.defaults.headers.common = {
+        Authorization: auth.authorizationHeader()
+      }
     }
   }
   deleteItem = e => {
