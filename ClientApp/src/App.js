@@ -9,6 +9,8 @@ import SingleClimb from './Pages/SingleClimb.jsx'
 import SingleRoute from './Pages/SingleRoute.jsx'
 import ToDo from './Pages/ToDo.jsx'
 import MountainProject from './Pages/MountainProject.jsx'
+import auth from './auth'
+import axios from 'axios'
 
 export default class App extends Component {
   static displayName = App.name
@@ -25,6 +27,28 @@ export default class App extends Component {
           <Route exact path="/route/:id" component={SingleRoute} />
           <Route exact path="/todo" component={ToDo} />
           <Route exact path="/record" component={MountainProject} />
+          <Route path="/login" render={() => auth.login()} />
+          <Route
+            path="/logout"
+            render={() => {
+              auth.logout()
+              return <p />
+            }}
+          />
+          <Route
+            path="/callback"
+            render={() => {
+              auth.handleAuthentication(() => {
+                // NOTE: Uncomment the following lines if you are using axios
+                //
+                // Set the axios authentication headers
+                axios.defaults.headers.common = {
+                  Authorization: auth.authorizationHeader()
+                }
+              })
+              return <p />
+            }}
+          />
         </Switch>
       </Layout>
     )
