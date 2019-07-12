@@ -69,6 +69,7 @@ export default function InputPage() {
           <h6 className="the-h6">Height {height}ft</h6>
           <div className="equipment-list">
             <input
+            className="slider-bar"
               type="range"
               max="200"
               min="20"
@@ -79,7 +80,7 @@ export default function InputPage() {
           </div>
           <h5 className="the-h6">Equipment</h5>
           <div className="equipment-list">
-            <label for="Sport">
+            <label className="checkbox" for="Sport">
               <input
                 type="checkbox"
                 id="sport"
@@ -89,7 +90,7 @@ export default function InputPage() {
               />
               Sport Setup
             </label>
-            <label for="trad-rack">
+            <label className="checkbox" for="trad-rack">
               <input
                 type="checkbox"
                 id="trad-rack"
@@ -102,7 +103,7 @@ export default function InputPage() {
           </div>
         </section>
         <section className="text-areas">
-          <h5 className="the-h6">Directions</h5>
+          <h5 className="the-dir">Directions</h5>
           <textarea
             cols="40"
             rows="8"

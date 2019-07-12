@@ -22,3 +22,14 @@ h2 {
   background-color: black;
   list-style: none;
 }
+.button-container {
+  max-width: 50%;
+}
+.route-info-container {
+  min-width: 50%;
+}
+.weather-info-container {
+  background-color: #6D9DC5;
+  max-width: 40%;
+  padding: 0.5rem;
+}

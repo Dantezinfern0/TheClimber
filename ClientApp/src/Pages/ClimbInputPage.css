@@ -15,7 +15,10 @@
 .route-input-page {
   background-image: url(https://lh3.googleusercontent.com/N2jZtuB-UqnR-uqQ6XprApjtt4tNcjmX9pq15PBAk2SIXdCcJrgs8S4-fIpGMKDyjaJLZQfVH5i470GxIYqWTfXoiL9_hlRK-LlXS1AXnioGqSPg8Ba-OTKKoP8hnEoMcrz4y8WTh-XmKtnqGhydgSYuTtcAjBH5aulsoXITSTqGCf5a1xkwPfExFipCq-H-XAgxD7L33p2vdAH6BqmuJMjWx-7G64os4LWIYXzna1QJbalOsvK4GWIWGH4B6Dk9g2UMo6MvPZQdhdqNjBvb1W9hqddSugrNBgvJAOWLBM7Uzf5zkl60PDuO5la69z54lLa9LKmWe1IIBFSXQfRr7-Dgs_NMBjuxpaY2kDH9We4irXPbq2ILA3ny4nCW01R-mWsFIoWQLIb38Bg1xkEdgKq8piZtrK2_CO0z2iHKWer7Lq-oTo7NUBswA3VWHz8DyBH3zDpu6xbd5ZyM4a-05E3xbAP1T5IOeSECDVbloVSWNDKbcLzrBDF99pSTnOIXpj59qo_vstjhJnghClcO98HV3gz-8aaxAVR0R77tQWYKQAS6SNO5-qOi0CAOU7c-L3BM4aQKWWuPDnb_NstH83BpdCYeABq0EbLPzsu5_1f4d_VwQ6ZrMWXYZ_budSw2u3ZI_VZASTvEVg-9UOoJvTgn8E939XQ=w2220-h1080-no);
   color: antiquewhite;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
+  background-color: ivory;
 }
 .equipment-list {
   display: flex;
@@ -31,4 +34,16 @@
 }
 .first-half {
   padding: 1rem;
+}
+.the-dir {
+  margin-top: 0.25rem;
+  background-color: #e26d5c;
+  margin-bottom: 0;
+  padding: 0.5rem;
+}
+.checkbox {
+  margin-left: 0.5rem;
+}
+.slider-bar {
+  margin: 0 0.5rem 0 0.5rem;
 }
