@@ -11,16 +11,7 @@ class BrowseClimbs extends Component {
       info: []
     }
   }
-  // componentWillMount() {
-  //   if (!localStorage.getItem("access_token")) {
-  //     window.location.href = "/login"
-  //   }
-  //   if (auth.isAuthenticated()) {
-  //     axios.defaults.headers.common = {
-  //       Authorization: auth.authorizationHeader()
-  //     }
-  //   }
-  // }
+ 
   deleteItem = e => {
     if (window.confirm('Delete this Entry?')) {
       axios.delete(`api/Climb/${e.target.value}`).then(resp => {

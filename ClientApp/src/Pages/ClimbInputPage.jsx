@@ -14,16 +14,13 @@ export default function InputPage() {
   const [sport, setSport] = useState()
   const [trad, setTrad] = useState()
 
-// useEffect() {
-//  if (!localStorage.getItem("access_token")) {
-//       window.location.href = "/login"
-//     }
-//     if (auth.isAuthenticated()) {
-//       axios.defaults.headers.common = {
-//         Authorization: auth.authorizationHeader()
-//       }
-//     }
-// }
+  if (auth.isAuthenticated()) {
+    axios.defaults.headers.common = {
+      Authorization: auth.authorizationHeader()
+    }
+  } else {
+    window.location.href = '/login'
+  }
 
   function sendData(e) {
     e.preventDefault()
@@ -40,8 +37,8 @@ export default function InputPage() {
         notes: notes
       })
       .then(resp => console.log(resp.data))
-      window.confirm('Log Entry Confirmed!')
-      window.location.reload(true)
+    window.confirm('Log Entry Confirmed!')
+    window.location.reload(true)
   }
 
   return (
@@ -80,7 +77,7 @@ export default function InputPage() {
           <h6 className="the-h6">Height {height}ft</h6>
           <div className="equipment-list">
             <input
-            className="slider-bar"
+              className="slider-bar"
               type="range"
               max="200"
               min="20"

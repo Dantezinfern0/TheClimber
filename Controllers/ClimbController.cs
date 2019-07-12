@@ -25,7 +25,7 @@ namespace sdg_react_template.Controllers
 
     // GET: api/Climb
     [HttpGet("getall")]
-    [Authorize]
+    
     public async Task<ActionResult<List<Climb>>> GetAllClimbs()
     {
       return await _context.Climbs.ToListAsync();
@@ -33,7 +33,7 @@ namespace sdg_react_template.Controllers
 
     // GET: api/Climb/5
     [HttpGet("{route}")]
-    [Authorize]
+    
     public async Task<ActionResult<Climb>> GetClimb(int route)
     {
       var climb = await _context.Climbs.FirstOrDefaultAsync(f => f.Id == route);
@@ -48,7 +48,7 @@ namespace sdg_react_template.Controllers
 
     // PUT: api/Climb/5
     [HttpPut("{id}")]
-    [Authorize]
+    
     public async Task<IActionResult> PutClimb(int id, Climb climb)
     {
       if (id != climb.Id)
@@ -79,7 +79,7 @@ namespace sdg_react_template.Controllers
 
     // POST: api/Climb
     [HttpPost("add")]
-    [Authorize]
+    
     public async Task<ActionResult<Climb>> PostClimb([FromBody] Climb climb)
     {
       _context.Climbs.Add(climb);
@@ -90,7 +90,7 @@ namespace sdg_react_template.Controllers
 
     // DELETE: api/Climb/5
     [HttpDelete("{id}")]
-    [Authorize]
+    
     public async Task<ActionResult<Climb>> DeleteClimb(int id)
     {
       var climb = await _context.Climbs.FindAsync(id);
