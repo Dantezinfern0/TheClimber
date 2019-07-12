@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './ClimbInputPage.css'
 import axios from 'axios'
 // import auth from '../auth'
@@ -13,6 +13,17 @@ export default function InputPage() {
   const [notes, setNotes] = useState('')
   const [sport, setSport] = useState()
   const [trad, setTrad] = useState()
+
+// useEffect() {
+//  if (!localStorage.getItem("access_token")) {
+//       window.location.href = "/login"
+//     }
+//     if (auth.isAuthenticated()) {
+//       axios.defaults.headers.common = {
+//         Authorization: auth.authorizationHeader()
+//       }
+//     }
+// }
 
   function sendData(e) {
     e.preventDefault()

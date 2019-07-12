@@ -13,7 +13,7 @@ namespace theclimber.Controllers
   public class SecretController : ControllerBase
   {
     [HttpGet]
-    public object Get()
+    public object TokenAcquisition()
     {
       var userId = User.Claims.First(f => f.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier").Value;
       return new { userId = userId, message = "only logged in users can see this" };
