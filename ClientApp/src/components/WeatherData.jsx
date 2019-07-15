@@ -24,7 +24,7 @@ class WeatherData extends Component {
       mountainProject: []
     }
   }
- 
+
   getLatLon = event => {
     event.preventDefault()
     axios
@@ -108,6 +108,7 @@ class WeatherData extends Component {
             <h6>Favorite Spots</h6>
             <section className="button-container">
               <button
+                className="button"
                 data-lat="36.112"
                 data-lon="-118.926"
                 onClick={this.getLatLon}
@@ -115,6 +116,7 @@ class WeatherData extends Component {
                 EchoCliffs
               </button>
               <button
+                className="button"
                 data-lat="34.096"
                 data-lon="-118.731"
                 onClick={this.getLatLon}
@@ -122,6 +124,7 @@ class WeatherData extends Component {
                 MalibuCreek
               </button>
               <button
+                className="button"
                 data-lat="36.596"
                 data-lon="-118.109"
                 onClick={this.getLatLon}
@@ -129,6 +132,7 @@ class WeatherData extends Component {
                 AlabamaHills
               </button>
               <button
+                className="button"
                 data-lat="36.155"
                 data-lon="-115.436"
                 onClick={this.getLatLon}
@@ -136,6 +140,7 @@ class WeatherData extends Component {
                 RedRocks,NV
               </button>
               <button
+                className="button"
                 data-lat="34.665"
                 data-lon="-116.978"
                 onClick={this.getLatLon}
@@ -143,6 +148,7 @@ class WeatherData extends Component {
                 NewJackCity
               </button>
               <button
+                className="button"
                 data-lat="34.348"
                 data-lon="-117.945"
                 onClick={this.getLatLon}
@@ -150,6 +156,7 @@ class WeatherData extends Component {
                 AngelesForrest
               </button>
               <button
+                className="button"
                 data-lat="34.414"
                 data-lon="-117.859"
                 onClick={this.getLatLon}
@@ -157,6 +164,7 @@ class WeatherData extends Component {
                 DevilsPunchBowl
               </button>
               <button
+                className="button"
                 data-lat="34.497"
                 data-lon="-119.852"
                 onClick={this.getLatLon}
@@ -164,6 +172,7 @@ class WeatherData extends Component {
                 Playgrounds
               </button>
               <button
+                className="button"
                 data-lat="34.578"
                 data-lon="-119.258"
                 onClick={this.getLatLon}
@@ -171,6 +180,7 @@ class WeatherData extends Component {
                 SespeGorge
               </button>
               <button
+                className="button"
                 data-lat="34.508"
                 data-lon="-119.276"
                 onClick={this.getLatLon}
@@ -178,6 +188,7 @@ class WeatherData extends Component {
                 WheelerGorge
               </button>
               <button
+                className="button"
                 data-lat="34.584"
                 data-lon="-119.263"
                 onClick={this.getLatLon}
@@ -185,6 +196,7 @@ class WeatherData extends Component {
                 Fortress
               </button>
               <button
+                className="button"
                 data-lat="33.76"
                 data-lon="-116.683"
                 onClick={this.getLatLon}
@@ -192,19 +204,32 @@ class WeatherData extends Component {
                 Tahquitz
               </button>
               <button
+                className="button"
                 data-lat="34.271"
                 data-lon="-118.604"
                 onClick={this.getLatLon}
               >
                 StoneyPoint
               </button>
-              <button value="92252" onClick={this.autoUpdate}>
+              <button
+                className="button"
+                value="92252"
+                onClick={this.autoUpdate}
+              >
                 JoshuaTree
               </button>
-              <button value="89506" onClick={this.autoUpdate}>
+              <button
+                className="button"
+                value="89506"
+                onClick={this.autoUpdate}
+              >
                 RedRocks
               </button>
-              <button value="93545" onClick={this.autoUpdate}>
+              <button
+                className="button"
+                value="93545"
+                onClick={this.autoUpdate}
+              >
                 LonePine
               </button>
             </section>
@@ -215,7 +240,7 @@ class WeatherData extends Component {
                   type="text"
                   placeholder="zip code..."
                   onChange={this.updateValue}
-                />
+                /><br/>
                 <button onClick={this.getWeather}>Search</button>
               </form>
               <section className="weather-info-container">
@@ -233,7 +258,7 @@ class WeatherData extends Component {
             <ul className="list-of-routes">
               {this.state.mountainProject.map(m => {
                 return (
-                  <Link key={m.id} to={`/route/${m.id}`}>
+                  <Link className="pad-me" key={m.id} to={`/route/${m.id}`}>
                     <li>
                       {m.name}-{m.rating}-{m.type}
                     </li>
@@ -243,7 +268,7 @@ class WeatherData extends Component {
             </ul>
           </section>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     )
   }

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Axios from 'axios'
 import './SingleClimb.css'
 import Footer from '../components/Footer.jsx'
+import auth from '../auth'
 
 class SingleClimb extends Component {
   constructor(props) {

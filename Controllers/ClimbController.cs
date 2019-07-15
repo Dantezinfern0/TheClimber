@@ -13,7 +13,6 @@ namespace sdg_react_template.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
-  [Authorize]
   public class ClimbController : ControllerBase
   {
     private readonly DatabaseContext _context;

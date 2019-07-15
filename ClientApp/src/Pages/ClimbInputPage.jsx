@@ -15,13 +15,6 @@ export default function InputPage() {
   const [sport, setSport] = useState()
   const [trad, setTrad] = useState()
 
-  if (auth.isAuthenticated()) {
-    axios.defaults.headers.common = {
-      Authorization: auth.authorizationHeader()
-    }
-  } else {
-    window.location.href = '/login'
-  }
 
   function sendData(e) {
     e.preventDefault()
@@ -47,7 +40,7 @@ export default function InputPage() {
       <h2 className="title-it">Route Entry Form</h2>
       <form className="form-class" onSubmit={sendData}>
         <section className="first-half">
-          <h6 className="the-h6">
+          <h6 className="the-left-top">
             Location
             <input
               type="text"
@@ -56,7 +49,7 @@ export default function InputPage() {
               value={location}
             />
           </h6>
-          <h6 className="the-h6">
+          <h6 className="the-left">
             Route Name
             <input
               type="text"
@@ -65,7 +58,7 @@ export default function InputPage() {
               value={routeName}
             />
           </h6>
-          <h6 className="the-h6">
+          <h6 className="the-left">
             Rating
             <input
               type="text"
@@ -75,7 +68,7 @@ export default function InputPage() {
             />
           </h6>
 
-          <h6 className="the-h6">Height {height}ft</h6>
+          <h6 className="the-left">Height {height}ft</h6>
           <div className="equipment-list">
             <input
               className="slider-bar"
@@ -87,8 +80,8 @@ export default function InputPage() {
               value={height}
             />
           </div>
-          <h5 className="the-h6">Equipment</h5>
-          <div className="equipment-list">
+          <h5 className="the-left">Equipment</h5>
+          <div className="equipment-list-bottom">
             <span>
               <label className="checkbox">Sport Setup </label>
               <input
@@ -110,22 +103,25 @@ export default function InputPage() {
         <section className="text-areas">
           <h5 className="the-dir">Directions</h5>
           <textarea
+          className="bottom-border"
             cols="40"
             rows="8"
             wrap="hard"
             onChange={e => setDirections(e.target.value)}
             value={directions}
           />
-          <h5 className="the-h6">Description</h5>
+          <h5 className="the-dir">Description</h5>
           <textarea
+          className="bottom-border"
             cols="40"
             rows="8"
             wrap="hard"
             onChange={e => setDescription(e.target.value)}
             value={description}
           />
-          <h5 className="the-h6">Notes</h5>
+          <h5 className="the-dir">Notes</h5>
           <textarea
+          className="bottom-border"
             cols="40"
             rows="8"
             wrap="hard"
@@ -134,8 +130,8 @@ export default function InputPage() {
           >
             Protection:
           </textarea>
-          <div>
-            <button onClick={sendData}>Add Route</button>
+          <div className="give-me-a-margin">
+            <button className="button" onClick={sendData}>Add Route</button>
           </div>
         </section>
       </form>

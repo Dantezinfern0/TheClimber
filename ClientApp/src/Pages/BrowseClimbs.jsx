@@ -12,20 +12,10 @@ class BrowseClimbs extends Component {
       info: []
     }
   }
-  componentWillMount() {
-    if (auth.isAuthenticated()) {
-      axios.defaults.headers.common = {
-        Authorization: auth.authorizationHeader()
-      }
-    } else {
-      window.location.href = '/login'
-    }
-  }
+
   deleteItem = e => {
     if (window.confirm('Delete this Entry?')) {
-      axios.delete(`api/Climb/${e.target.value}`,{
-        HEADER: {Authorization: auth.authorizationHeader()}
-      }).then(resp => {
+      axios.delete(`api/Climb/${e.target.value}`).then(resp => {
         console.log(resp.data)
       })
       window.location.reload(true)
@@ -34,13 +24,13 @@ class BrowseClimbs extends Component {
     }
   }
   componentDidMount() {
-    axios.get('api/climb/getall',{
-      HEADER: {Authorization: auth.authorizationHeader()}
-    }).then(resp => {
-      this.setState({
-        info: resp.data
+    axios
+      .get('api/climb/getall')
+      .then(resp => {
+        this.setState({
+          info: resp.data
+        })
       })
-    })
   }
   render() {
     return (
@@ -49,7 +39,7 @@ class BrowseClimbs extends Component {
         <ul>
           {this.state.info.map(m => {
             return (
-              <div key ={m.id} className="list-item-div">
+              <div key={m.id} className="list-item-div">
                 <Link key={m.id} to={`/browse/${m.id}`}>
                   <li> {m.routeName} </li>
                 </Link>
