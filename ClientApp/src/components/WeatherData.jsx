@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import './WeatherData.css'
 import { Link } from 'react-router-dom'
-const weatherUrl = 'HTTPS://api.openweathermap.org/data/2.5/weather?'
+const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?'
 const weatherApiKey = '&appid=770d3167b3eba3b1c6578ba7c1153c3b'
 const mountainUrl =
   'https://www.mountainproject.com/data/get-routes-for-lat-lon?'

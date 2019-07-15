@@ -53,7 +53,7 @@ export class NavMenu extends Component {
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink  className="text-dark" href="https://www.mountainproject.com/" >
+                  <NavLink  className="text-dark" href="https://www.mountainproject.com/" target="_blank" rel="noopener noreferrer" >
                     MountainProject.com
                   </NavLink>
                 </NavItem>
