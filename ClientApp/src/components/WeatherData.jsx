@@ -23,6 +23,7 @@ class WeatherData extends Component {
       mountainProject: []
     }
   }
+ 
   getLatLon = event => {
     event.preventDefault()
     axios
@@ -59,7 +60,7 @@ class WeatherData extends Component {
   getWeather = event => {
     event.preventDefault()
     axios
-      .get(`${weatherUrl}zip=${this.state.userInput}${weatherApiKey}`)
+      .get(`${weatherUrl}zip=${this.state.userInput},us${weatherApiKey}`)
       .then(resp => {
         console.log(resp.data)
         this.setState({

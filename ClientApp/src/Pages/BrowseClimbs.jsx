@@ -11,7 +11,15 @@ class BrowseClimbs extends Component {
       info: []
     }
   }
- 
+  componentWillMount() {
+    if (auth.isAuthenticated()) {
+      axios.defaults.headers.common = {
+        Authorization: auth.authorizationHeader()
+      }
+    } else {
+      window.location.href = '/login'
+    }
+  }
   deleteItem = e => {
     if (window.confirm('Delete this Entry?')) {
       axios.delete(`api/Climb/${e.target.value}`).then(resp => {

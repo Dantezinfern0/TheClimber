@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './ClimbInputPage.css'
 import axios from 'axios'
 import auth from '../auth'
@@ -42,7 +42,7 @@ export default function InputPage() {
   }
 
   return (
-    <body className="route-input-page">
+    <div className="route-input-page">
       <h2 className="title-it">Route Entry Form</h2>
       <form className="form-class" onSubmit={sendData}>
         <section className="first-half">
@@ -88,26 +88,22 @@ export default function InputPage() {
           </div>
           <h5 className="the-h6">Equipment</h5>
           <div className="equipment-list">
-            <label className="checkbox" for="Sport">
+            <span>
+              <label className="checkbox">Sport Setup </label>
               <input
                 type="checkbox"
-                id="sport"
-                name="sportRack"
                 onChange={e => setSport(e.target.checked)}
                 value={sport}
               />
-              Sport Setup
-            </label>
-            <label className="checkbox" for="trad-rack">
+            </span>
+            <span>
+              <label className="checkbox">Trad Gear </label>
               <input
                 type="checkbox"
-                id="trad-rack"
-                name="tradRack"
                 onChange={e => setTrad(e.target.checked)}
                 value={trad}
               />
-              Trad Gear
-            </label>
+            </span>
           </div>
         </section>
         <section className="text-areas">
@@ -142,6 +138,6 @@ export default function InputPage() {
           </div>
         </section>
       </form>
-    </body>
+    </div>
   )
 }
