@@ -12,14 +12,15 @@ class SingleClimb extends Component {
   }
 
   componentDidMount() {
-    Axios.get(`api/climb/${this.props.match.params.id}`).then(resp => {
+    Axios.get(`api/climb/${this.props.match.params.id}`, {
+      HEADER: { Authorization: auth.authorizationHeader() }
+    }).then(resp => {
       console.log(resp.data)
       this.setState({
         theClimb: resp.data
       })
     })
   }
-  
 
   render() {
     return (

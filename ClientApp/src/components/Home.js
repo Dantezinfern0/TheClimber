@@ -15,9 +15,9 @@ export class Home extends Component {
   }
   componentWillMount() {
     if (auth.isAuthenticated()) {
-      axios.defaults.headers.common = {
-        Authorization: auth.authorizationHeader()
-      }
+      // axios.defaults.headers.common = {
+      //   Authorization: auth.authorizationHeader()
+      // }
     } else {
       window.location.href = '/login'
     }

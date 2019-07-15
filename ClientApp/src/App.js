@@ -42,9 +42,9 @@ export default class App extends Component {
                 // NOTE: Uncomment the following lines if you are using axios
                 //
                 // Set the axios authentication headers
-                axios.defaults.headers.common = {
-                  Authorization: auth.authorizationHeader()
-                }
+                // axios.defaults.headers.common = {
+                //   Authorization: auth.authorizationHeader()
+                // }
               })
               return <p />
             }}

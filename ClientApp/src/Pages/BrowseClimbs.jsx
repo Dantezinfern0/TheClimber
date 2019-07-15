@@ -23,7 +23,9 @@ class BrowseClimbs extends Component {
   }
   deleteItem = e => {
     if (window.confirm('Delete this Entry?')) {
-      axios.delete(`api/Climb/${e.target.value}`).then(resp => {
+      axios.delete(`api/Climb/${e.target.value}`,{
+        HEADER: {Authorization: auth.authorizationHeader()}
+      }).then(resp => {
         console.log(resp.data)
       })
       window.location.reload(true)
@@ -32,7 +34,9 @@ class BrowseClimbs extends Component {
     }
   }
   componentDidMount() {
-    axios.get('api/climb/getall').then(resp => {
+    axios.get('api/climb/getall',{
+      HEADER: {Authorization: auth.authorizationHeader()}
+    }).then(resp => {
       this.setState({
         info: resp.data
       })
