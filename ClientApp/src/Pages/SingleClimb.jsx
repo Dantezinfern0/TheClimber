@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Axios from 'axios'
 import './SingleClimb.css'
+import Footer from '../components/Footer.jsx'
 
 class SingleClimb extends Component {
   constructor(props) {
@@ -38,6 +39,7 @@ class SingleClimb extends Component {
         <p>{this.state.theClimb.description}</p>
         <h6>Notes</h6>
         <p>{this.state.theClimb.notes}</p>
+        <Footer />
       </div>
     )
   }

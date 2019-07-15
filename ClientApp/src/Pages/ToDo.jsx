@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Footer from '../components/Footer.jsx'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
 
@@ -38,6 +39,7 @@ class ToDo extends Component {
             </Link>
         })}
         </div>
+        <Footer />
       </div>
     )
   }

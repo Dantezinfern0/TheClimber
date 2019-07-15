@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Footer from '../components/Footer.jsx'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import './BrowseClimbs.css'
@@ -55,6 +56,7 @@ class BrowseClimbs extends Component {
             )
           })}
         </ul>
+        <Footer />
       </div>
     )
   }

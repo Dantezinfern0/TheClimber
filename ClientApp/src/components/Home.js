@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './Home.css'
 import axios from 'axios'
 import auth from '../auth'
+import Footer from './Footer.jsx'
 
 export class Home extends Component {
   static displayName = Home.name
@@ -26,6 +27,7 @@ export class Home extends Component {
     return (
       <div>
         <img alt="Dante" className="home-page-image" src={this.state.url} />
+        <Footer />
       </div>
     )
   }

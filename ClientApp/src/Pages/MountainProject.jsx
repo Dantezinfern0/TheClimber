@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import './MountainProject.css'
+import Footer from '../components/Footer.jsx'
 
 const URL1 =
   'https://www.mountainproject.com/data/get-ticks?email=danteharasz@gmail.com&key=200507880-8cf9c49dbbe6841799698503aad73a96'
@@ -52,6 +53,7 @@ class MountainProject extends Component {
           })}
         </ul>
         </div>
+        <Footer />
       </div>
     )
   }
