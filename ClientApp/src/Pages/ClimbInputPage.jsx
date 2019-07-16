@@ -124,7 +124,7 @@ export default function InputPage() {
           <textarea
             className="bottom-border"
             cols="30"
-            rows="4"
+            rows="3"
             wrap="hard"
             onChange={e => setNotes(e.target.value)}
             value={notes}

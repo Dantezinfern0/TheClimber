@@ -266,7 +266,7 @@ class WeatherData extends Component {
                   return (
                     <Link className="pad-me" key={m.id} to={`/route/${m.id}`}>
                       <li className="ink-color">
-                        {m.name}-{m.rating}-{m.type}
+                        {m.name}--{m.rating}--{m.type}
                       </li>
                     </Link>
                   )
