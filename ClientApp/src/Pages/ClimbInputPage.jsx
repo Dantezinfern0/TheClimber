@@ -105,7 +105,7 @@ export default function InputPage() {
           <textarea
           className="bottom-border"
             cols="40"
-            rows="8"
+            rows="4"
             wrap="hard"
             onChange={e => setDirections(e.target.value)}
             value={directions}
@@ -114,7 +114,7 @@ export default function InputPage() {
           <textarea
           className="bottom-border"
             cols="40"
-            rows="8"
+            rows="4"
             wrap="hard"
             onChange={e => setDescription(e.target.value)}
             value={description}
@@ -123,7 +123,7 @@ export default function InputPage() {
           <textarea
           className="bottom-border"
             cols="40"
-            rows="8"
+            rows="4"
             wrap="hard"
             onChange={e => setNotes(e.target.value)}
             value={notes}

@@ -31,6 +31,8 @@ h2 {
   list-style: none;
   border-radius: 10px;
   margin:0;
+  overflow: scroll;
+  height: 400px;
 }
 .pad-me {
   padding: 1rem;
