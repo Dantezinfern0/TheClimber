@@ -2,8 +2,11 @@
   border-color: black;
   border-width: 2px;
   border-style: solid;
-  max-width: 50%;
+  /* max-width: 50%; */
   padding: 1rem;
+}
+.pad-it {
+  padding: 0.5rem;
 }
 html {
   background-color: ivory;

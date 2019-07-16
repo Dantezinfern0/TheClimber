@@ -48,7 +48,7 @@ class MountainProject extends Component {
           {this.state.routes.map(m => {
             return (
               <Link key={m.id} to={`/route/${m.id}`}>
-                <li>{m.name}</li>
+                <li className="pad-it">{m.name}</li>
               </Link>
             )
           })}
