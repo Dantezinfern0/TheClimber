@@ -37,7 +37,7 @@ class ToDo extends Component {
         <div className="thin-black-border">
         {this.state.stuff.map(m => {
           return <Link key={m.id} to={`/route/${m.id}`}>
-            <p>{m.name}</p>
+            <p>{m.name}-{m.rating}-{m.type}</p>
             </Link>
         })}
         </div>
