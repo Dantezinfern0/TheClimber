@@ -100,173 +100,179 @@ class WeatherData extends Component {
   }
   render() {
     return (
-      <div className="weather-background">
-        <div className="weather-container">
-          <section>
-            <h1>Know Before You Go</h1>
-            <h2>Weather Check</h2>
-            <h6>Favorite Spots</h6>
-            <section className="button-container">
-              <button
-                className="button"
-                data-lat="36.112"
-                data-lon="-118.926"
-                onClick={this.getLatLon}
-              >
-                EchoCliffs
-              </button>
-              <button
-                className="button"
-                data-lat="34.096"
-                data-lon="-118.731"
-                onClick={this.getLatLon}
-              >
-                MalibuCreek
-              </button>
-              <button
-                className="button"
-                data-lat="36.596"
-                data-lon="-118.109"
-                onClick={this.getLatLon}
-              >
-                AlabamaHills
-              </button>
-              <button
-                className="button"
-                data-lat="36.155"
-                data-lon="-115.436"
-                onClick={this.getLatLon}
-              >
-                RedRocks,NV
-              </button>
-              <button
-                className="button"
-                data-lat="34.665"
-                data-lon="-116.978"
-                onClick={this.getLatLon}
-              >
-                NewJackCity
-              </button>
-              <button
-                className="button"
-                data-lat="34.348"
-                data-lon="-117.945"
-                onClick={this.getLatLon}
-              >
-                AngelesForrest
-              </button>
-              <button
-                className="button"
-                data-lat="34.414"
-                data-lon="-117.859"
-                onClick={this.getLatLon}
-              >
-                DevilsPunchBowl
-              </button>
-              <button
-                className="button"
-                data-lat="34.497"
-                data-lon="-119.852"
-                onClick={this.getLatLon}
-              >
-                Playgrounds
-              </button>
-              <button
-                className="button"
-                data-lat="34.578"
-                data-lon="-119.258"
-                onClick={this.getLatLon}
-              >
-                SespeGorge
-              </button>
-              <button
-                className="button"
-                data-lat="34.508"
-                data-lon="-119.276"
-                onClick={this.getLatLon}
-              >
-                WheelerGorge
-              </button>
-              <button
-                className="button"
-                data-lat="34.584"
-                data-lon="-119.263"
-                onClick={this.getLatLon}
-              >
-                Fortress
-              </button>
-              <button
-                className="button"
-                data-lat="33.76"
-                data-lon="-116.683"
-                onClick={this.getLatLon}
-              >
-                Tahquitz
-              </button>
-              <button
-                className="button"
-                data-lat="34.271"
-                data-lon="-118.604"
-                onClick={this.getLatLon}
-              >
-                StoneyPoint
-              </button>
-              <button
-                className="button"
-                value="92252"
-                onClick={this.autoUpdate}
-              >
-                JoshuaTree
-              </button>
-              <button
-                className="button"
-                value="89506"
-                onClick={this.autoUpdate}
-              >
-                RedRocks
-              </button>
-              <button
-                className="button"
-                value="93545"
-                onClick={this.autoUpdate}
-              >
-                LonePine
-              </button>
-            </section>
+      <div>
+        <div className="weather-background">
+          <div className="weather-container">
             <div>
-              <form className="weather-form" onSubmit={this.getWeather}>
-                <h6>Search</h6>
-                <input
-                  type="text"
-                  placeholder="zip code..."
-                  onChange={this.updateValue}
-                /><br/>
-                <button onClick={this.getWeather}>Search</button>
-              </form>
-              <section className="weather-info-container">
-                <p>City: {this.state.weather.name}</p>
-                <p>Pressure: {this.state.press}</p>
-                <p>Current Temp: {this.state.temperature}˚F</p>
-                <p>Conditions: {this.state.description}</p>
-                <p>High: {this.state.max}˚F</p>
-                <p>Low: {this.state.min}˚F</p>
+              <h2>Weather Check</h2>
+              <section className="flex-box">
+                <div>
+                  <form className="weather-form" onSubmit={this.getWeather}>
+                    <h6>Search</h6>
+                    <input
+                      type="text"
+                      placeholder="zip code..."
+                      onChange={this.updateValue}
+                    />
+                    <br />
+                    <button onClick={this.getWeather}>Search</button>
+                  </form>
+                  <section className="weather-info-container">
+                    <p>City: {this.state.weather.name}</p>
+                    <p>Pressure: {this.state.press}</p>
+                    <p>Current Temp: {this.state.temperature}˚F</p>
+                    <p>Conditions: {this.state.description}</p>
+                    <p>High: {this.state.max}˚F</p>
+                    <p>Low: {this.state.min}˚F</p>
+                  </section>
+                </div>
+                <div>
+                  <h6>Favorite Spots</h6>
+                  <section className="button-container">
+                    <button
+                      className="button"
+                      data-lat="36.112"
+                      data-lon="-118.926"
+                      onClick={this.getLatLon}
+                    >
+                      EchoCliffs
+                    </button>
+                    <button
+                      className="button"
+                      data-lat="34.096"
+                      data-lon="-118.731"
+                      onClick={this.getLatLon}
+                    >
+                      MalibuCreek
+                    </button>
+                    <button
+                      className="button"
+                      data-lat="36.596"
+                      data-lon="-118.109"
+                      onClick={this.getLatLon}
+                    >
+                      AlabamaHills
+                    </button>
+                    <button
+                      className="button"
+                      data-lat="36.155"
+                      data-lon="-115.436"
+                      onClick={this.getLatLon}
+                    >
+                      RedRocks,NV
+                    </button>
+                    <button
+                      className="button"
+                      data-lat="34.665"
+                      data-lon="-116.978"
+                      onClick={this.getLatLon}
+                    >
+                      NewJackCity
+                    </button>
+                    <button
+                      className="button"
+                      data-lat="34.348"
+                      data-lon="-117.945"
+                      onClick={this.getLatLon}
+                    >
+                      AngelesForrest
+                    </button>
+                    <button
+                      className="button"
+                      data-lat="34.414"
+                      data-lon="-117.859"
+                      onClick={this.getLatLon}
+                    >
+                      DevilsPunchBowl
+                    </button>
+                    <button
+                      className="button"
+                      data-lat="34.497"
+                      data-lon="-119.852"
+                      onClick={this.getLatLon}
+                    >
+                      Playgrounds
+                    </button>
+                    <button
+                      className="button"
+                      data-lat="34.578"
+                      data-lon="-119.258"
+                      onClick={this.getLatLon}
+                    >
+                      SespeGorge
+                    </button>
+                    <button
+                      className="button"
+                      data-lat="34.508"
+                      data-lon="-119.276"
+                      onClick={this.getLatLon}
+                    >
+                      WheelerGorge
+                    </button>
+                    <button
+                      className="button"
+                      data-lat="34.584"
+                      data-lon="-119.263"
+                      onClick={this.getLatLon}
+                    >
+                      Fortress
+                    </button>
+                    <button
+                      className="button"
+                      data-lat="33.76"
+                      data-lon="-116.683"
+                      onClick={this.getLatLon}
+                    >
+                      Tahquitz
+                    </button>
+                    <button
+                      className="button"
+                      data-lat="34.271"
+                      data-lon="-118.604"
+                      onClick={this.getLatLon}
+                    >
+                      StoneyPoint
+                    </button>
+                    <button
+                      className="button"
+                      value="92252"
+                      onClick={this.autoUpdate}
+                    >
+                      JoshuaTree
+                    </button>
+                    <button
+                      className="button"
+                      value="89506"
+                      onClick={this.autoUpdate}
+                    >
+                      RedRocks
+                    </button>
+                    <button
+                      className="button"
+                      value="93545"
+                      onClick={this.autoUpdate}
+                    >
+                      LonePine
+                    </button>
+                  </section>
+                </div>
               </section>
             </div>
-          </section>
-          <section className="route-info-container">
-            <h1 className="route-list">Route Info</h1>
-            <ul className="list-of-routes">
-              {this.state.mountainProject.map(m => {
-                return (
-                  <Link className="pad-me" key={m.id} to={`/route/${m.id}`}>
-                    <li>
-                      {m.name}-{m.rating}-{m.type}
-                    </li>
-                  </Link>
-                )
-              })}
-            </ul>
-          </section>
+            <section className="route-info-container">
+              <h1 className="route-list">Route Info</h1>
+              <ul className="list-of-routes">
+                {this.state.mountainProject.map(m => {
+                  return (
+                    <Link className="pad-me" key={m.id} to={`/route/${m.id}`}>
+                      <li>
+                        {m.name}-{m.rating}-{m.type}
+                      </li>
+                    </Link>
+                  )
+                })}
+              </ul>
+            </section>
+          </div>
         </div>
         <Footer />
       </div>

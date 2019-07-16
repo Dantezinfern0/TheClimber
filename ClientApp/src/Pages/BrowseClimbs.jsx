@@ -3,7 +3,7 @@ import Footer from '../components/Footer.jsx'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import './BrowseClimbs.css'
-import auth from '../auth'
+
 
 class BrowseClimbs extends Component {
   constructor(props) {

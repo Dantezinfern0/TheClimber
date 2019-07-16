@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Footer from '../components/Footer.jsx'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
+import './ToDo.css'
 
 const toDoUrl =
   'https://www.mountainproject.com/data/get-to-dos?email=danteharasz@gmail.com&key=200507880-8cf9c49dbbe6841799698503aad73a96'
