@@ -1,14 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import './Footer.css'
 
 class Footer extends Component {
   render() {
     return (
       <div className="footer">
-       <p> Made With 🖤 at SDG</p>
+        <p>
+          {' '}
+          Made With <span>🖤</span>
+          at SDG
+        </p>
       </div>
-    );
+    )
   }
 }
 
-export default Footer;
+export default Footer
