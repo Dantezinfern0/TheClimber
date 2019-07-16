@@ -260,7 +260,7 @@ class WeatherData extends Component {
               </section>
             </div>
             <section className="route-info-container">
-              <h1 className="route-list">Route Info</h1>
+              <h1 className="route-list">Nearby Route Info</h1>
               <ul className="list-of-routes">
                 {this.state.mountainProject.map(m => {
                   return (

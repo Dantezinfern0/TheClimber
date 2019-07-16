@@ -59,7 +59,7 @@ export class NavMenu extends Component {
                 </NavItem>
                 <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/weather-data">
-                    Search
+                    Weather/Planning
                   </NavLink>
                 </NavItem>
                 <NavItem>
@@ -79,7 +79,7 @@ export class NavMenu extends Component {
                 </NavItem>
                 <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/record">
-                    Recorded
+                    ClimbingRecord
                   </NavLink>
                 </NavItem>
                 <NavItem>
