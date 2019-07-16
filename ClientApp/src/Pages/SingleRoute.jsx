@@ -24,7 +24,7 @@ class SingleRoute extends Component {
   render() {
     return (
       <div>
-        <h1>{this.state.routeInfo.name}</h1>
+        <h2 className="title-effect">{this.state.routeInfo.name}</h2>
         <h6>Brought to you by MountainProject.com</h6>
         <hr />
         <h6>Pitches: {this.state.routeInfo.pitches}</h6>

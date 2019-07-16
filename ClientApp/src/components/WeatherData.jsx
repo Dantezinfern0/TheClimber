@@ -265,7 +265,7 @@ class WeatherData extends Component {
                 {this.state.mountainProject.map(m => {
                   return (
                     <Link className="pad-me" key={m.id} to={`/route/${m.id}`}>
-                      <li>
+                      <li className="ink-color">
                         {m.name}-{m.rating}-{m.type}
                       </li>
                     </Link>

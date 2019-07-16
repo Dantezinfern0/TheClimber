@@ -26,7 +26,7 @@ class SingleClimb extends Component {
   render() {
     return (
       <div>
-        <h1>{this.state.theClimb.routeName}</h1>
+        <h2 className="title-effect">{this.state.theClimb.routeName}</h2>
         <h6>(from personal logs)</h6>
         <hr />
         <h6>Rating</h6>
