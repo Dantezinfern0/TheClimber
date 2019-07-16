@@ -18,6 +18,11 @@
   margin-bottom: 0;
   padding: 0.5rem;
 }
+.important-button {
+  background-color: #e26d5c;
+  color: antiquewhite;
+  border-radius: 20px;
+}
 .route-input-page {
   border-radius: 10px;
 

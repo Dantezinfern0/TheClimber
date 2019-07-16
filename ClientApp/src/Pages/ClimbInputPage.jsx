@@ -4,6 +4,7 @@ import './ClimbInputPage.css'
 import axios from 'axios'
 
 
+
 export default function InputPage() {
   const [location, setLocation] = useState('')
   const [routeName, setRouteName] = useState('')
@@ -14,7 +15,6 @@ export default function InputPage() {
   const [notes, setNotes] = useState('')
   const [sport, setSport] = useState()
   const [trad, setTrad] = useState()
-
 
   function sendData(e) {
     e.preventDefault()
@@ -134,7 +134,7 @@ export default function InputPage() {
             Protection:
           </textarea>
           <div className="give-me-a-margin">
-            <button  className="button" onClick={sendData}>Add Route</button>
+            <button className="important-button" onClick={sendData}>Add Route</button>
           </div>
         </section>
       </form>
