@@ -3,8 +3,6 @@ import Footer from '../components/Footer.jsx'
 import './ClimbInputPage.css'
 import axios from 'axios'
 
-
-
 export default function InputPage() {
   const [location, setLocation] = useState('')
   const [routeName, setRouteName] = useState('')
@@ -42,7 +40,7 @@ export default function InputPage() {
           <h6 className="the-left-top">
             Location{' '}
             <input
-            className="align-right"
+              className="align-right"
               type="text"
               placeholder="Red Rocks..."
               onChange={e => setLocation(e.target.value)}
@@ -52,25 +50,25 @@ export default function InputPage() {
           <h6 className="the-left">
             Route Name{' '}
             <input
-            className="align-right"
+              className="align-right"
               type="text"
               placeholder="The Climb..."
               onChange={e => setRouteName(e.target.value)}
               value={routeName}
             />
           </h6>
-          
+
           <h6 className="the-left">
             Rating{' '}
             <input
-            className="align-right"
+              className="align-right"
               type="text"
               placeholder="5.10b..."
               onChange={e => setRating(e.target.value)}
               value={rating}
             />
           </h6>
-        
+
           <h6 className="the-left">Height {height}ft</h6>
           <div className="equipment-list">
             <input
@@ -106,7 +104,7 @@ export default function InputPage() {
         <section className="text-areas">
           <h5 className="the-dir">Directions</h5>
           <textarea
-          className="bottom-border"
+            className="bottom-border"
             cols="30"
             rows="4"
             wrap="hard"
@@ -115,7 +113,7 @@ export default function InputPage() {
           />
           <h5 className="the-dir">Description</h5>
           <textarea
-          className="bottom-border"
+            className="bottom-border"
             cols="30"
             rows="4"
             wrap="hard"
@@ -124,7 +122,7 @@ export default function InputPage() {
           />
           <h5 className="the-dir">Notes</h5>
           <textarea
-          className="bottom-border"
+            className="bottom-border"
             cols="30"
             rows="4"
             wrap="hard"
@@ -134,7 +132,9 @@ export default function InputPage() {
             Protection:
           </textarea>
           <div className="give-me-a-margin">
-            <button className="important-button" onClick={sendData}>Add Route</button>
+            <button className="important-button" onClick={sendData}>
+              Add Route
+            </button>
           </div>
         </section>
       </form>
