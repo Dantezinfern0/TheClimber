@@ -34,15 +34,15 @@ export default function InputPage() {
     window.confirm('Log Entry Confirmed!')
     window.location.reload(true)
   }
-
   return (
     <div className="route-input-page">
       <h2 className="title-it">Route Entry Form</h2>
       <form className="form-class" onSubmit={sendData}>
         <section className="first-half">
           <h6 className="the-left-top">
-            Location
+            Location{' '}
             <input
+            className="align-right"
               type="text"
               placeholder="Red Rocks..."
               onChange={e => setLocation(e.target.value)}
@@ -50,24 +50,27 @@ export default function InputPage() {
             />
           </h6>
           <h6 className="the-left">
-            Route Name
+            Route Name{' '}
             <input
+            className="align-right"
               type="text"
               placeholder="The Climb..."
               onChange={e => setRouteName(e.target.value)}
               value={routeName}
             />
           </h6>
+          
           <h6 className="the-left">
-            Rating
+            Rating{' '}
             <input
+            className="align-right"
               type="text"
               placeholder="5.10b..."
               onChange={e => setRating(e.target.value)}
               value={rating}
             />
           </h6>
-
+        
           <h6 className="the-left">Height {height}ft</h6>
           <div className="equipment-list">
             <input
@@ -131,7 +134,7 @@ export default function InputPage() {
             Protection:
           </textarea>
           <div className="give-me-a-margin">
-            <button className="button" onClick={sendData}>Add Route</button>
+            <button  className="button" onClick={sendData}>Add Route</button>
           </div>
         </section>
       </form>

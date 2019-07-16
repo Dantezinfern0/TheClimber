@@ -104,11 +104,12 @@ class WeatherData extends Component {
         <div className="weather-background">
           <div className="weather-container">
             <div>
-              <h2>Weather Check</h2>
+              <h2 className="pad-it-good">Weather Check</h2>
+              <hr className="zero-margin"/>
               <section className="flex-box">
                 <div>
                   <form className="weather-form" onSubmit={this.getWeather}>
-                    <h6>Search</h6>
+                    <h6 className="zero-margin">Search</h6>
                     <input
                       type="text"
                       placeholder="zip code..."
