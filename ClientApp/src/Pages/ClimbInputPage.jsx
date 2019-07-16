@@ -107,7 +107,7 @@ export default function InputPage() {
           <h5 className="the-dir">Directions</h5>
           <textarea
           className="bottom-border"
-            cols="40"
+            cols="30"
             rows="4"
             wrap="hard"
             onChange={e => setDirections(e.target.value)}
@@ -116,7 +116,7 @@ export default function InputPage() {
           <h5 className="the-dir">Description</h5>
           <textarea
           className="bottom-border"
-            cols="40"
+            cols="30"
             rows="4"
             wrap="hard"
             onChange={e => setDescription(e.target.value)}
@@ -125,7 +125,7 @@ export default function InputPage() {
           <h5 className="the-dir">Notes</h5>
           <textarea
           className="bottom-border"
-            cols="40"
+            cols="30"
             rows="4"
             wrap="hard"
             onChange={e => setNotes(e.target.value)}
