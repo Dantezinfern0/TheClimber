@@ -10,3 +10,7 @@
   background-color: #e26d5c;
   padding: 0.5rem;
 }
+.scroll-it {
+  overflow: scroll;
+  height: 400px;
+}

@@ -34,10 +34,10 @@ class ToDo extends Component {
       <div>
         <h2 className="title-effect">To Do List</h2>
         <h6>Brought to you by MountainProject.com</h6>
-        <div className="thin-black-border">
+        <div className="thin-black-border scroll-it">
         {this.state.stuff.map(m => {
           return <Link key={m.id} to={`/route/${m.id}`}>
-            <p>{m.name}--{m.rating}--{m.type}</p>
+            <p>{m.name}<br/>Rating:{m.rating}<br/>Type:{m.type}</p>
             </Link>
         })}
         </div>

@@ -45,11 +45,11 @@ class MountainProject extends Component {
         <h5>Hardest Climb Completed:{this.state.tickInfo.hardest}</h5>
         <h5>Average Rating:{this.state.tickInfo.average}</h5>
         <div className="thin-black-border">
-        <ul>
+        <ul className="scroll-it">
           {this.state.routes.map(m => {
             return (
               <Link key={m.id} to={`/route/${m.id}`}>
-                <li className="pad-it">{m.name}--{m.rating}--{m.type}</li>
+                <li className="pad-it">{m.name}<br/>Rating:{m.rating}<br/>Type:{m.type}</li>
               </Link>
             )
           })}
