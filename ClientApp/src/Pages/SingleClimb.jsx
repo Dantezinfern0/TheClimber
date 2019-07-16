@@ -27,6 +27,7 @@ class SingleClimb extends Component {
     return (
       <div>
         <h1>{this.state.theClimb.routeName}</h1>
+        <h6>Brought to you by MountainProject.com</h6>
         <h6>Rating</h6>
         <p>{this.state.theClimb.rating}</p>
         {/* {this.state.theClimb.trad && <p>trad</p>}

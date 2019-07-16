@@ -40,6 +40,7 @@ class MountainProject extends Component {
     return (
       <div>
         <h1>Climbing Record</h1>
+        <h6>Brought to you by MountainProject.com</h6>
         <h5>Hardest:{this.state.tickInfo.hardest}</h5>
         <h5>Average:{this.state.tickInfo.average}</h5>
         <div className="thin-black-border">
