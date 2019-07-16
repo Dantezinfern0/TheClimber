@@ -1,25 +1,25 @@
 .title-it {
   display: flex;
   justify-content: center;
-  background-color: #e26d5c;
+  background-color: #d64c37;
   color: black;
   border-radius: 10px;
 }
 .the-left {
-  background-color: #e26d5c;
+  background-color: #d64c37;
   margin-top: 0;
   margin-bottom: 0;
   padding: 0.5rem;
 }
 .the-left-top {
-  background-color: #e26d5c;
+  background-color: #d64c37;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   margin-bottom: 0;
   padding: 0.5rem;
 }
 .important-button {
-  background-color: #e26d5c;
+  background-color: #d64c37;
   color: antiquewhite;
   border-radius: 20px;
 }
@@ -36,7 +36,7 @@
 .equipment-list {
   display: flex;
   flex-direction: column;
-  background-color: #e26d5c;
+  background-color: #d64c37;
   margin-bottom: 0;
 }
 .form-class {
@@ -51,7 +51,7 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   margin-top: 0.25rem;
-  background-color: #e26d5c;
+  background-color: #d64c37;
   margin-bottom: 0;
   padding: 0.5rem;
 }
@@ -64,7 +64,7 @@
 .equipment-list-bottom {
   display: flex;
   flex-direction: column;
-  background-color: #e26d5c;
+  background-color: #d64c37;
   margin-bottom: 0;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
