@@ -10,7 +10,7 @@ import SingleRoute from './Pages/SingleRoute.jsx'
 import ToDo from './Pages/ToDo.jsx'
 import MountainProject from './Pages/MountainProject.jsx'
 import auth from './auth'
-import axios from 'axios'
+
 
 export default class App extends Component {
   static displayName = App.name

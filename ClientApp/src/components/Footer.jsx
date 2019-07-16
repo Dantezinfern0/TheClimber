@@ -7,7 +7,7 @@ class Footer extends Component {
       <div className="footer">
         <p>
           {' '}
-          Made With <span>🖤</span>
+          Made With <span role="img">🖤</span>
           at SDG
         </p>
       </div>

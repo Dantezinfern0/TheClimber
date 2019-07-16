@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Footer from '../components/Footer.jsx'
 import './ClimbInputPage.css'
 import axios from 'axios'
-import auth from '../auth'
+
 
 export default function InputPage() {
   const [location, setLocation] = useState('')
