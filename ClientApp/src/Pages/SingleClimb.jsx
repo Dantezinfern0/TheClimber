@@ -28,6 +28,7 @@ class SingleClimb extends Component {
       <div>
         <h1>{this.state.theClimb.routeName}</h1>
         <h6>(from personal logs)</h6>
+        <hr />
         <h6>Rating</h6>
         <p>{this.state.theClimb.rating}</p>
         {/* {this.state.theClimb.trad && <p>trad</p>}

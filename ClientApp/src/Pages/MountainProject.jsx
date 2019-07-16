@@ -41,8 +41,9 @@ class MountainProject extends Component {
       <div>
         <h1>Climbing Record</h1>
         <h6>Brought to you by MountainProject.com</h6>
-        <h5>Hardest:{this.state.tickInfo.hardest}</h5>
-        <h5>Average:{this.state.tickInfo.average}</h5>
+        <hr />
+        <h5>Hardest Climb Completed:{this.state.tickInfo.hardest}</h5>
+        <h5>Average Rating:{this.state.tickInfo.average}</h5>
         <div className="thin-black-border">
         <ul>
           {this.state.routes.map(m => {
