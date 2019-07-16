@@ -37,7 +37,7 @@ export class NavMenu extends Component {
           light
         >
           <Container>
-            <NavbarBrand tag={Link} to="/">
+            <NavbarBrand className="title-effect" tag={Link} to="/">
               The Climber
             </NavbarBrand>
             <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />

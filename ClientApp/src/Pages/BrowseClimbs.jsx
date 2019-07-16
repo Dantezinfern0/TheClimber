@@ -35,7 +35,7 @@ class BrowseClimbs extends Component {
   render() {
     return (
       <div>
-        <h2>Personal Logs</h2>
+        <h3 className="title-effect" >Personal Logs</h3>
         <ul>
           {this.state.info.map(m => {
             return (

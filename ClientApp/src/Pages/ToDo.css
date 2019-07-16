@@ -1,6 +1,12 @@
+/* ToDo css page */
 .thin-black-border {
   border-color: black;
   border-width: 2px;
   box-shadow: 10px 10px 2px 1px rgba(0, 0, 255, 0.2);
   margin-bottom: 1rem; 
+}
+.title-effect {
+  border-radius: 10px;
+  background-color: #e26d5c;
+  padding: 0.5rem;
 }

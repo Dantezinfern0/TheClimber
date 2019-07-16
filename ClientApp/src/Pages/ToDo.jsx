@@ -32,7 +32,7 @@ class ToDo extends Component {
   render() {
     return (
       <div>
-        <h1>To Do List</h1>
+        <h2 className="title-effect">To Do List</h2>
         <h6>Brought to you by MountainProject.com</h6>
         <div className="thin-black-border">
         {this.state.stuff.map(m => {

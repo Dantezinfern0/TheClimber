@@ -39,7 +39,7 @@ class MountainProject extends Component {
   render() {
     return (
       <div>
-        <h1>Climbing Record</h1>
+        <h2 className="title-effect">Climbing Record</h2>
         <h6>Brought to you by MountainProject.com</h6>
         <hr />
         <h5>Hardest Climb Completed:{this.state.tickInfo.hardest}</h5>
