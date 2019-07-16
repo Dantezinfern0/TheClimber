@@ -30,11 +30,11 @@
   flex-direction: row;
 }
 .ink-color {
-  color: #e26d5c;
+  color: #e48476;
 }
 .route-list {
   background-color: black;
-  color: #e26d5c;
+  color: #e48476;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding-left: 1.5rem;
@@ -62,7 +62,7 @@
   margin-left: 20%;
 }
 .weather-info-container {
-  background-color: #6D9DC5;
+  background-color: rgb(131, 176, 212);
   /* max-width: 50%; */
   padding: 0.5rem;
   border-top-right-radius: 10px;

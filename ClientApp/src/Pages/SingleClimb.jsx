@@ -31,8 +31,9 @@ class SingleClimb extends Component {
         <hr />
         <h6>Rating</h6>
         <p>{this.state.theClimb.rating}</p>
-        {/* {this.state.theClimb.trad && <p>trad</p>}
-        {this.state.theClimb.sport && <p>sport</p>} */}
+        <h6>Protection</h6>
+        {this.state.theClimb.tradGear && <p>trad</p>}
+        {this.state.theClimb.sportGear && <p>sport</p>}
         <h6>Climbing Area</h6>
         <p>{this.state.theClimb.location}</p>
         <h6>Height</h6>

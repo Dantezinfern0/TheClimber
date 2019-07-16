@@ -18,8 +18,8 @@ export default function InputPage() {
     e.preventDefault()
     axios
       .post('api/climb/add', {
-        sport: sport,
-        trad: trad,
+        sportGear: sport,
+        tradGear: trad,
         location: location,
         routeName: routeName,
         rating: rating,
