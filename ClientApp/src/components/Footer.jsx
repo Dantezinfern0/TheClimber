@@ -6,7 +6,7 @@ class Footer extends Component {
     return (
       <div className="footer">
         <p>
-          Made With <span aria-label="heart" role="img">🖤</span>
+          Made With <span aria-label="heart" role="img">🖤</span>{' '}
           at SDG
         </p>
       </div>
