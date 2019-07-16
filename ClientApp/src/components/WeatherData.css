@@ -26,21 +26,22 @@
 }
 .weather-container {
   display: flex;
-  align-items: space-between;
+  align-items: space-around;
   flex-direction: row;
 }
 .ink-color {
   color: rgb(131, 176, 212);
 }
 .route-list {
-  background-color: #030202;
-  color: ivory;
+  background-color: #880D1E;
+  color: #d64c37;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding-left: 1.5rem;
+  padding-bottom: 0.5rem;
 }
 .list-of-routes {
-  background-color: #030202;
+  background-color: #880D1E;
   list-style: none;
   border-radius: 10px;
   margin:0;
