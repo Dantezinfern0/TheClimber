@@ -61,6 +61,7 @@
 .route-info-container {
   min-width: 50%;
   margin-left: 20%;
+  margin-right: 10%;
 }
 .weather-info-container {
   background-color: rgb(131, 176, 212);
