@@ -130,14 +130,14 @@ class WeatherData extends Component {
                 <div>
                   <h6>Favorite Spots</h6>
                   <section className="button-container">
-                    <button
+                    {/* <button
                       className="button"
                       data-lat="36.112"
                       data-lon="-118.926"
                       onClick={this.getLatLon}
                     >
                       EchoCliffs
-                    </button>
+                    </button> */}
                     <button
                       className="button"
                       data-lat="34.096"
@@ -241,13 +241,13 @@ class WeatherData extends Component {
                     >
                       JoshuaTree
                     </button>
-                    <button
+                    {/* <button
                       className="button"
                       value="89506"
                       onClick={this.autoUpdate}
                     >
                       RedRocks
-                    </button>
+                    </button> */}
                     <button
                       className="button"
                       value="93545"
