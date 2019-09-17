@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Footer from '../components/Footer.jsx'
 import './ClimbInputPage.css'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 export default function InputPage() {
   const [location, setLocation] = useState('')
@@ -135,6 +136,9 @@ export default function InputPage() {
             <button className="important-button" onClick={sendData}>
               Add Route
             </button>
+            <Link to="/browse">
+              <button className="important-button">View Logs</button>
+            </Link>
           </div>
         </section>
       </form>
