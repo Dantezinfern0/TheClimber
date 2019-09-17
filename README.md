@@ -1,23 +1,10 @@
-# Defualt Template for SDG .NET Course
+This is a fullstack web application I developed to log climbs I've been on and to display weather and route information from mountain project.com.  I use my own API I created with Dotnet and two outside API's in this project.
 
-This is the default template for a simple .NET Core Web React App. This template has: 
+Log climb page: This page is where you can input climbing information from a recent trip into the SQL database.
 
-- CORS Enabled
-- Postgres & EF Core
-- Swagger
-- Ready for Docker Deployment
+Browse Climbs:  This page allows you to manage and view the climbs that you have entered into the SQL database.
 
-to use:
+Weather Data page: Displays the weather data for a specific zip code and the routes that can be found nearby.  There are several favorite buttons available.
 
-- [x] Update your database name in `DatabaseContext.cs`
+Todo List page: this page displays climbs that I have on my to do list on mountain project.
 
-to Deploy to heroku:
-- [x] create a web app on heroku, make sure to have the CLI downloaded, installed, logged in and be logged into the container via heroku. 
-- [x] Update your `dockerfile` to use your `*.dll` file instead of `dotnet-sdg-template.dll` 
-- [ ] Update the deploy script:
-    - [ ] change `sdg-template-image` to `your-project-name-image`
-    - [ ] change `heroku-web-app` to your web app name on heroku
-
-## PROTIP: 
-
-When you are complete with the project and have turned it in to your instructor, update this read me with details about the assignment. 
